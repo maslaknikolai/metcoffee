@@ -154,19 +154,19 @@ figure {
 }
 
 .fs-slide._03 {
-  background-image: url('../images/image-60.jpg');
+  background-image: url('../images/image-60.jpg.webp');
 }
 
 .fs-slide._07 {
-  background-image: url('../images/image-64.jpg');
+  background-image: url('../images/image-64.jpg.webp');
 }
 
 .fs-slide._02 {
-  background-image: url('../images/image-59.jpg');
+  background-image: url('../images/image-59.jpg.webp');
 }
 
 .fs-slide._06 {
-  background-image: url('../images/3111.png');
+  background-image: url('../images/3111.png.webp');
 }
 
 .section {
@@ -1228,7 +1228,7 @@ figure {
 }
 
 .card {
-  background-image: url('../images/foil-iridescent-01.jpg');
+  background-image: url('../images/foil-iridescent-01.jpg.webp');
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
