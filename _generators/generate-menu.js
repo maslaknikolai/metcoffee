@@ -60,7 +60,7 @@ const items = groups.reduce((acc, group) => {
             <div class="menupos ${option.noVO ? 'hide' : ''}"></div>
           </div>
           <div class="menuitemdescription">
-            ${option.vegan ? '<div class="icons"><img src="images/icon__vegan.svg" loading="lazy" alt="" class="image"></div>' : ''}
+            ${option.vegan ? '<div class="icons"><img src="/images/icon__vegan.svg" loading="lazy" alt="" class="image"></div>' : ''}
             <h3 class="menuhtext">${option.name}</h3>
             <div class="menuprice">${option.priceSPb || item.priceSPb || ''}</div>
           </div>
