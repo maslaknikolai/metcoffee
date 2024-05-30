@@ -449,6 +449,8 @@ figure {
   / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
+  grid-area: 1 / 3 / 2 / 11;
+  align-self: auto;
 }
 
 .blockmenu.menuheader {
@@ -474,6 +476,7 @@ figure {
   margin-top: 70px;
   margin-bottom: 30px;
   font-size: 1vw;
+  grid-area: Title;
 }
 
 .grid3 {
@@ -609,6 +612,7 @@ figure {
 .menuitemdescription {
   display: flex;
   position: relative;
+  grid-area: Description;
 }
 
 .image {
@@ -2574,11 +2578,11 @@ figure {
   grid-area: Title;
 }
 
-#w-node-_9b4eaaae-8d06-5821-1453-a6b354e909e5-6835a39b {
+.coffee-house {
   grid-area: Coffee-house;
 }
 
-#w-node-_9b4eaaae-8d06-5821-1453-a6b354e909e9-6835a39b {
+.coffee-description {
   grid-area: Description;
 }
 
