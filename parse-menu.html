@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV Menu</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .dropzone {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed #4CAF50;
+            box-sizing: border-box;
+            transition: background-color 0.3s;
+        }
+        .dropzone.dragover {
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+        .upload-btn {
+            padding: 20px;
+            font-size: 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .upload-btn:hover {
+            background-color: #45a049;
+        }
+        #file-input {
+            display: none;
+        }
+        .result {
+            padding: 20px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/csv-parse@5.5.6/dist/umd/sync.min.js"></script>
+</head>
+<body>
+    <div class="dropzone" id="dropzone">
+        <button class="upload-btn" id="upload-btn">Загрузить меню .csv</button>
+        <input type="file" id="file-input" accept=".csv">
+    </div>
+
+    <div class="result">
+
+    </div>
+
+    <script>
+        const dropzoneEl = document.getElementById('dropzone');
+        const uploadBtnEl = document.getElementById('upload-btn');
+        const fileInputEl = document.getElementById('file-input');
+        const resultEl = document.querySelector('.result');
+
+        uploadBtnEl.addEventListener('click', () => {
+            fileInputEl.click();
+        });
+
+        document.addEventListener('dragover', (event) => {
+            event.preventDefault();
+            dropzoneEl.classList.add('dragover');
+        });
+
+        document.addEventListener('dragleave', (event) => {
+            dropzoneEl.classList.remove('dragover');
+        });
+
+        document.addEventListener('drop', (event) => {
+            event.preventDefault();
+            dropzoneEl.classList.remove('dragover');
+            fileInputEl.files = event.dataTransfer.files;
+            handleFile(fileInputEl.files[0]);  // Call function to handle file
+        });
+
+        fileInputEl.addEventListener('change', () => {
+            handleFile(fileInputEl.files[0]);  // Call function to handle file
+        });
+
+        function handleFile(csvFile) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const csv = event.target.result;
+                const tableRows = csv_parse_sync.parse(csv)
+                const parseResult = parseTable(tableRows);
+                console.log({tableRows, parseResult});
+                showResultMenu(parseResult)
+            };
+            reader.readAsText(csvFile);
+        }
+
+        function parseTable(tableRows) {
+            let res = [];
+            let shouldCreateNewItem = true
+
+            tableRows
+                .slice(1)
+                .forEach((row) => {
+                    const isEmptyLine = row.every(it => it.trim() === '')
+
+                    if (isEmptyLine) {
+                        shouldCreateNewItem = true;
+                        return
+                    }
+
+                    const isGroupLine = !!row[0] && row.slice(1).every(it => it.trim() === '');
+
+                    if (isGroupLine) {
+                        shouldCreateNewItem = true;
+                        res.push({
+                            name: row[0].trim(),
+                            dishes: []
+                        });
+                        return
+                    }
+
+                    const lastAddedGroup = res[res.length - 1];
+
+                    if (shouldCreateNewItem) {
+                        const newDish = clear({
+                            name: row[2].trim(),
+                            priceSPb: row[3].trim(),
+                            priceN: row[7].trim(),
+                            vegan: row[0].includes('v'),
+                            noSPb: row[3].includes('нет'),
+                            noSov: row[5].includes('нет'),
+                            noVO: row[6].includes('нет'),
+                            noN: row[7].includes('нет'),
+                            options: []
+                        })
+                        lastAddedGroup.dishes.push(newDish);
+                        shouldCreateNewItem = false;
+                        return
+                    }
+
+                    const lastAddedDish = lastAddedGroup.dishes[lastAddedGroup.dishes.length - 1];
+
+                    const newOption = clear({
+                        name: row[2].trim(),
+                        priceSPb: row[3].trim(),
+                        priceN: row[7].trim(),
+                        vegan: row[0].includes('v'),
+                        noSPb: row[3].includes('нет'),
+                        noSov: row[5].includes('нет'),
+                        noVO: row[6].includes('нет'),
+                        noN: row[7].includes('нет'),
+                    })
+
+                    lastAddedDish.options.push(newOption);
+                })
+
+            return res
+
+            function clear(obj) {
+                return Object.entries(obj).reduce((acc, [key, value]) => {
+                    if (value && value!=='no') {
+                        acc[key] = value;
+                    }
+                    return acc;
+                }, {});
+            }
+        }
+
+        function showResultMenu(groups) {
+            dropzoneEl.style.display = 'none';
+            groups.forEach(group => {
+                const groupEl = document.createElement('div');
+                groupEl.innerHTML = `<h2>${group.name}</h2>`;
+                groupEl.setAttribute('style', `
+                    border: 1px solid #000;
+                    padding: 10px;
+                    margin: 10px;
+                `);
+
+                group.dishes.forEach(dish => {
+                    const dishEl = document.createElement('div');
+
+                    dishEl.innerHTML = `
+                        <h3>
+                            ${dish.vegan ? veganSvg() : ''}
+                            ${dish.name}
+                            ${dish.priceSPb && !dish.priceSPb.includes('нет') ? `<br />Цена СПб: ${dish.priceSPb}` : ''}
+                            ${dish.noSPb ? '<br />Нет в СПБ' : ''}
+                            ${dish.noSov ? '<br />Нет в 2 Cов. и РК' : ''}
+                            ${dish.noVO ? '<br />Нет в В.О. и МР' : ''}
+                            ${dish.priceN && !dish.priceN.includes('нет') ? `<br />Цена Нальчик: ${dish.priceN}` : ''}
+                            ${dish.noN ? '<br />Нет в Нальчике' : ''}
+                        </h3>
+                    `;
+
+                    dish.options.forEach(option => {
+                        const optionEl = document.createElement('div');
+
+                        const isOptionHasPrice =
+                            (option.priceSPb && !option.priceSPb.includes('нет')) ||
+                            (option.priceN && !option.priceN.includes('нет'))
+
+                        optionEl.innerHTML = `<div style="margin-bottom: 10px;">
+                            ${option.vegan ? veganSvg() : ''}
+                            ${option.name}
+                            ${option.priceSPb && !option.priceSPb.includes('нет') ? `<br />Цена СПб: ${option.priceSPb}` : ''}
+                            ${option.noSPb ? '<br />Нет в СПБ' : ''}
+                            ${option.noSov ? '<br />Нет в 2 Cов. и РК' : ''}
+                            ${option.noVO ? '<br />Нет в В.О. и МР' : ''}
+                            ${option.priceN && !option.priceN.includes('нет') ? `<br />Цена Нальчик: ${option.priceN}` : ''}
+                            ${option.noN ? '<br />Нет в Нальчике' : ''}
+                        </div>`;
+                        dishEl.appendChild(optionEl);
+                    });
+
+                    groupEl.appendChild(dishEl);
+                });
+                resultEl.appendChild(groupEl);
+            });
+        }
+
+        function veganSvg() {
+            return `
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.00098 0.5C2.50098 0.5 0.500977 2.5 0.500977 5V9.5H5.00098C7.50098 9.5 9.50098 7.5 9.50098 5V0.5H5.00098Z" stroke="#333333"/>
+<path d="M0.367188 9.63294L6.40052 3.59961" stroke="#333333"/>
+</svg>
+`
+        }
+    </script>
+</body>
+</html>
