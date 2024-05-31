@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload CSV Menu</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
         }
         .dropzone {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,7 +56,7 @@
         <input type="file" id="file-input" accept=".csv">
     </div>
 
-    <div class="result">
+    <div class="result" style="display: none;">
 
     </div>
 
@@ -173,6 +176,7 @@
 
         function showResultMenu(groups) {
             dropzoneEl.style.display = 'none';
+            resultEl.style.display = 'block';
             groups.forEach(group => {
                 const groupEl = document.createElement('div');
                 groupEl.innerHTML = `<h2>${group.name}</h2>`;
