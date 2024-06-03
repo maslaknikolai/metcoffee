@@ -548,11 +548,36 @@ for (element of filterByTextElements) {
 
                             ${dish.priceSPb || dish.priceN ? `
                               <div class="my-menu-address-line">
-                                <div>${!dish.noSPb ? (dish.priceSPb || '') : 'Не доступно'}</div>
-                                <div>${!dish.noSPb ? (dish.priceSPb || '') : 'Не доступно'}</div>
-                                <div>${!dish.noSPb ? (dish.priceSPb || '') : 'Не доступно'}</div>
-                                <div>${!dish.noSPb ? (dish.priceSPb || '') : 'Не доступно'}</div>
-                                <div>${!dish.noN ? (dish.priceN || '')     : 'Не доступно'}</div>
+                                <div>
+                                  ${!dish.noSPb
+                                    ? (dish.priceSPb || '')
+                                    : `<div class="menupos"></div>
+                                  `}
+                                </div>
+                                <div>
+                                  ${!dish.noSPb
+                                    ? (dish.priceSPb || '')
+                                    : `<div class="menupos"></div>
+                                  `}
+                                </div>
+                                <div>
+                                  ${!dish.noSPb
+                                    ? (dish.priceSPb || '')
+                                    : `<div class="menupos"></div>
+                                  `}
+                                </div>
+                                <div>
+                                  ${!dish.noSPb
+                                    ? (dish.priceSPb || '')
+                                    : `<div class="menupos"></div>
+                                  `}
+                                </div>
+                                <div>
+                                  ${!dish.noN
+                                    ? (dish.priceN || '')
+                                    : `<div class="menupos"></div>
+                                  `}
+                                </div>
                               </div>
                             ` : ''}
                             ${createMenuOptions(dish)}
@@ -572,11 +597,36 @@ for (element of filterByTextElements) {
                                 <p>${option.name}</p>
                             </div>
                             <div class="my-menu-address-line">
-                              <div>${!option.noSPb ? (option.priceSPb || '') : 'Не доступно'}</div>
-                              <div>${!option.noSPb ? (option.priceSPb || '') : 'Не доступно'}</div>
-                              <div>${!option.noSPb ? (option.priceSPb || '') : 'Не доступно'}</div>
-                              <div>${!option.noSPb ? (option.priceSPb || '') : 'Не доступно'}</div>
-                              <div>${!option.noN ? (option.priceN || '')     : 'Не доступно'}</div>
+                              <div>
+                                ${!option.noSPb
+                                  ? (option.priceSPb || '')
+                                  : `<div class="menupos"></div>
+                                `}
+                              </div>
+                              <div>
+                                ${!option.noSPb
+                                  ? (option.priceSPb || '')
+                                  : `<div class="menupos"></div>
+                                `}
+                              </div>
+                              <div>
+                                ${!option.noSPb
+                                  ? (option.priceSPb || '')
+                                  : `<div class="menupos"></div>
+                                `}
+                              </div>
+                              <div>
+                                ${!option.noSPb
+                                  ? (option.priceSPb || '')
+                                  : `<div class="menupos"></div>
+                                `}
+                              </div>
+                              <div>
+                                ${!option.noN
+                                  ? (option.priceN || '')
+                                  : `<div class="menupos"></div>
+                                `}
+                              </div>
                             </div>
                         </div>
                     `

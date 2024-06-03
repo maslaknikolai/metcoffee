@@ -489,9 +489,9 @@ figure {
 }
 
 .menupos {
+  margin-top: 7px;
   height: 5px;
   background-color: var(--black);
-  flex: 1;
   margin-right: 2px;
 }
 
