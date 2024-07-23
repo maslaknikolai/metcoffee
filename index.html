@@ -487,9 +487,19 @@ const material = new Blotter.ChannelSplitMaterial();
 </script>
   <script>
   $(document).ready(function(){
-    var manifestoHeight = $("#manifesto").outerHeight(true); // value in px
-    $("html,body").scrollTop(manifestoHeight * 1);
-    console.log(manifestoHeight);
+    // var manifestoHeight = $("#manifesto").outerHeight(true); // value in px
+    // $("html,body").scrollTop(manifestoHeight * 1);
+    // console.log(manifestoHeight);
+
+    setTimeout(() => {
+      const element = document.getElementById('w-node-_54093b92-f5bd-f295-a4dc-cc916d4310c1-1a89b5d3'); // Replace 'yourElementId' with the actual ID of the element
+
+      // Scroll to an offset of 10px above the element
+      const yOffset = -50; // Negative value to go above the element
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }, 100)
   });
 </script>
   <!-- <script>
