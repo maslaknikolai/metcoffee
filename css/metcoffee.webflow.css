@@ -794,7 +794,6 @@ figure {
 .fs-slide-content__mobile {
   max-height: 100%;
   object-fit: cover;
-  background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -804,7 +803,6 @@ figure {
 
 .fs-slide-content__desktop {
   max-height: 100%;
-  background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: contain;
