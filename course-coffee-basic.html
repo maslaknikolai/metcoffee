@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Кофе базовый курс — Школа бариста MET</title>
+
+  <style>
+    :root{
+      --bg:#fff;
+      --card:#f0f0f0;
+      --text:#111;
+      --muted:rgba(0,0,0,.70);
+      --line:rgba(0,0,0,.15);
+    }
+    body{ margin:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    a{ color:inherit; }
+    .container{ max-width:1160px; margin:0 auto; padding:0 24px; }
+
+    /* top spacing (чтобы меню не наезжало) */
+    .course-hero{ padding:120px 0 34px; }
+
+    .course-grid{
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+      align-items:start;
+    }
+
+    .title{
+      margin:0 0 10px;
+      font-size: 54px;
+      line-height: 1;
+      letter-spacing:-0.02em;
+    }
+    .lead{
+      margin:0 0 18px;
+      font-size:18px;
+      line-height:1.45;
+      color: rgba(0,0,0,.85);
+      max-width: 70ch;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin: 14px 0 0;
+      font-size:14px;
+      color: rgba(0,0,0,.78);
+    }
+    .pill{
+      background: var(--card);
+      border-radius:2px;
+      padding: 8px 10px;
+    }
+
+    .card{
+      background: var(--card);
+      border-radius: 2px;
+      padding: 22px;
+    }
+
+    .sticky{ position: sticky; top: 110px; }
+    .priceRow{
+      display:flex; justify-content:space-between; align-items:baseline;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: rgba(0,0,0,.75);
+    }
+    .priceRow strong{ font-size: 18px; color:#111; }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 14px;
+      font-size: 14px;
+      text-decoration:none;
+      border-radius:2px;
+      transition: opacity .2s ease;
+      cursor:pointer;
+      border: 1px solid transparent;
+    }
+    .btn:hover{ opacity:.75; }
+    .btnPrimary{ background:#111; color:#fff; }
+    .btnGhost{ background:transparent; color:#111; border-color: var(--line); }
+    .btnFull{ width: 100%; }
+
+    .h2{
+      margin: 26px 0 12px;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    .p{
+      margin:0;
+      color: rgba(0,0,0,.85);
+      line-height: 1.55;
+    }
+    .note{
+      margin-top: 8px;
+      font-size: 13px;
+      color: rgba(0,0,0,.62);
+      line-height: 1.4;
+    }
+
+    /* accordion */
+    .acc{ margin-top: 12px; display:flex; flex-direction:column; gap:10px; }
+    details{ background: var(--card); border-radius:2px; overflow:hidden; }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      padding: 14px 16px;
+      font-size: 16px;
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .sumRight{ font-size: 13px; color: rgba(0,0,0,.62); white-space: nowrap; }
+    .accBody{ padding: 0 16px 16px; color: rgba(0,0,0,.85); line-height: 1.55; }
+
+    .list{ margin: 10px 0 0; padding-left: 18px; }
+    .list li{ margin: 8px 0; color: rgba(0,0,0,.88); }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .mini{
+      background: var(--card);
+      border-radius:2px;
+      padding: 16px;
+    }
+    .mini strong{ display:block; margin-bottom: 6px; font-size: 14px; }
+    .mini span{ color: rgba(0,0,0,.78); font-size: 14px; line-height: 1.45; display:block; }
+
+    /* form */
+    .label{ font-size: 12px; letter-spacing:.06em; text-transform:uppercase; color: rgba(0,0,0,.65); }
+    .input{
+      width:100%;
+      padding: 12px 12px;
+      border: 1px solid var(--line);
+      background:#fff;
+      font-size: 14px;
+      box-sizing:border-box;
+    }
+    textarea.input{ min-height: 110px; resize: vertical; }
+
+    .divider{ height: 1px; background: rgba(0,0,0,.08); margin: 16px 0; }
+
+    @media (max-width: 991px){
+      .course-hero{ padding-top: 90px; }
+      .course-grid{ grid-template-columns: 1fr; }
+      .sticky{ position: relative; top: 0; }
+      .title{ font-size: 40px; }
+      .grid3{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- если у тебя на сайте есть общий header/menu — оставь его как в остальных страницах.
+       сейчас не вставляю, чтобы не конфликтовало -->
+
+  <main>
+    <section class="course-hero">
+      <div class="container">
+        <div class="course-grid">
+
+          <!-- LEFT -->
+          <div>
+            <h1 class="title">КОФЕ БАЗОВЫЙ КУРС</h1>
+            <p class="lead">
+              Базовый курс нацелен как на начинающих бариста, так и на уже работающих. 
+              Этот курс дает основные знания пути «от зерна до чашки», оборудовании, в том числе кофе-машинах, 
+              кофемолках. Конечно, главным в этом курсе будет практическое обучение приготовления эспрессо, 
+              капучино. (в общем для обучения сотрудников в сетках)
+            </p>
+
+            <div class="meta">
+              <span class="pill">Длительность: <strong>6 часов (1–2 дня)</strong></span>
+              <span class="pill">Формат: <strong>теория + практика</strong></span>
+              <span class="pill">Цена: <strong>9 000 ₽</strong></span>
+            </div>
+
+            <h2 class="h2">Что будет на выходе</h2>
+            <div class="grid3">
+              <div class="mini">
+                <strong>Понимание вкуса</strong>
+                <span>почему горчит/кислит/пусто и что менять.</span>
+              </div>
+              <div class="mini">
+                <strong>Стабильный эспрессо</strong>
+                <span>по весам и рецепту, а не «на глаз».</span>
+              </div>
+              <div class="mini">
+                <strong>Капучино без борьбы</strong>
+                <span>текстура, температура, скорость.</span>
+              </div>
+            </div>
+
+            <h2 class="h2">Программа (по блокам)</h2>
+
+            <div class="acc">
+              <details open>
+                <summary>
+                  <span>Теория: от зерна до приготовления</span>
+                  <span class="sumRight">~1 час</span>
+                </summary>
+                <div class="accBody">
+                  <ul class="list">
+                    <li>Путь дерева → ягода.</li>
+                    <li>Страны / кофейный пояс.</li>
+                    <li>Наши часто используемые сорта и континенты (почему они и в чем разница)</li>
+                    <li>Сбор: машинный / ручной.</li>
+                    <li>Обработка: мытая / натуральная / полумытая / полусухая.</li>
+                    <li>Транспортировка: вода, упаковка.</li>
+                    <li>Свежесть зелёного зерна.</li>
+                    <li>Обжарка, хранение, способы приготовления.</li>
+                  </ul>
+
+                  <div class="divider"></div>
+
+                  <p class="p"><strong>Дегустация:</strong> от 3 континентов (разная обработка, читаемое чистое зерно).</p>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  <span>Оборудование: теория + практика</span>
+                  <span class="sumRight">30–60 мин</span>
+                </summary>
+                <div class="accBody">
+                  <div class="grid3">
+                    <div class="mini">
+                      <strong>Кофемашина</strong>
+                      <span>
+                        Типы кофемашин. Устройство (стабильность температуры и производительность, как это влияет на 
+                        ежедневную работу и получаемый напиток). Ежедневное обслуживание. Вода – фильтры (краткий обзор 
+                        воды и типичные проблемы с которыми можно столкнуться). Наиболее часто встречающиеся сбои в работе 
+                        машины. Техника безопасности при работе.
+                      </span>
+                    </div>
+                    <div class="mini">
+                      <strong>Кофемолка</strong>
+                      <span>
+                        Устройство кофемолки. Типы жерновов (какая разница с технической части, в том числе и по 
+                        потребляемой энергии). Влияние жерновов на качество помола. Обслуживание кофемолки,  
+                        наиболее часто встречающиеся сбои в работе кофемолки. Техника безопасности.
+                      </span>
+                    </div>
+                    <div class="mini">
+                      <strong>Аксессуары</strong>
+                      <span>
+                        необходимые в работе бариста от чашек до рефрактометра. Организация рабочего места 
+                        Закрытие смены. От уборки до чек листа.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  <span>Эспрессо: теория + практика</span>
+                  <span class="sumRight">~2 часа</span>
+                </summary>
+                <div class="accBody">
+                  <ul class="list">
+                    <li>Каким мы видим эспрессо (важно сделать акцент на наше понимание этого
+                        напитка, баланса вкуса и тела. Также важно сказать о двойном холдере и
+                        обьяснить наш выбор)</li>
+                    <li>Рецепт эспрессо (почему необходимы весы и как выглядит сам рецепт, зачем он
+                        нужен и как это работает на потоке)</li>
+                    <li>Темпер (разница между темперами, нужен ли разравниватель)</li>
+                    <li>Как разравнивание влияет на экстаркцию (нужно сделать 2 разных эспрессо и
+                        показать данные на рефрактометре)</li>
+                    <li>Тряпки, поддон (количество тряпок, цвет, и как и куда класть и складывать)</li>
+                    <li>3 шота (кисло,горько, сладко)</li>
+                    <li>По секундам 2 холдера (от 20 до 24 секунд, проба и поиск баланса)</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  <span>Работа с помолом (практика)</span>
+                  <span class="sumRight">внутри блока эспрессо</span>
+                </summary>
+                <div class="accBody">
+                  <ul class="list">
+                    <li>Настройка интерактива.</li>
+                    <li>Дальше задания – более 4 бариста делим по 2 человека! (По 10 мин на человека
+                        и каждое задание, 1 ое задание включает настройку помола и самостоятельный
+                        поиск баланса, 2 ое задание это настройка по заданому рецепту и описание
+                        эспрессо)</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  <span>Капучино: теория + практика</span>
+                  <span class="sumRight">~2 часа</span>
+                </summary>
+                <div class="accBody">
+                  <div class="grid3">
+                    <div class="mini">
+                      <strong>Капучино — параметры</strong>
+                      <span>
+                       Как мы его видим (наши параметры по количеству мл., соотношению молока и
+                       кофе, температура, рекомендации по балансу).
+                       Соотношение кофе и молока.
+                       Температура напитка Вливание - классика,
+                       Деление. Вливание - сердце.
+                      </span>
+                    </div>
+                    <div class="mini">
+                      <strong>Молоко</strong>
+                      <span>
+                       Требования к молоку для капучино (разновидности и наша рекомендация).
+                       Что происходит с молоком при взбавнии (почему не стоит взбивать уже взбитое
+                       молоко и что будет если его заморозить и потом взбить, например).
+                       Взбивание (количество, питчера - разновидности, уход за питчерами).
+                       Температура молока - ориентиры.
+                      </span>
+                    </div>
+                    <div class="mini">
+                      <strong>Словарь бариста</strong>
+                      <span>
+                        Напечатанный или обязательно устно сказанный - записанный у учеников.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+
+            <h2 class="h2">Как записаться</h2>
+            <p class="p">
+              Нажимаешь «Записаться» справа — оставляешь контакт и цель. Мы быстро свяжемся с вами.
+            </p>
+            <p class="note">
+               
+            </p>
+          </div>
+
+          <!-- RIGHT -->
+          <aside class="sticky">
+            <div class="card">
+              <div class="priceRow">
+                <span>Стоимость</span>
+                <strong>9 000 ₽</strong>
+              </div>
+
+              <a class="btn btnPrimary btnFull" href="#apply">Записаться</a>
+              <div style="height:10px"></div>
+              <a class="btn btnGhost btnFull" href="barista-school.html">← Назад к школе</a>
+
+              <div class="divider"></div>
+
+              <div id="apply">
+                <div style="font-size:12px; letter-spacing:.06em; text-transform:uppercase; color: rgba(0,0,0,.65); margin-bottom:10px;">
+                  Заявка на запись
+                </div>
+
+                <form class="course-form" method="post">
+                  <input type="hidden" name="course" value="Кофе базовый курс — 9 000 ₽">
+                  <label class="label">Имя</label>
+                  <input id="apply-name" class="input" name="name" placeholder="Как к тебе обращаться" required>
+
+                  <div style="height:8px"></div>
+
+                  <label class="label">Контакт</label>
+                  <input class="input" name="contact" placeholder="Telegram / телефон" required>
+
+                  <div style="height:8px"></div>
+
+                  <label class="label">Что нужно</label>
+                  <textarea class="input" name="message" placeholder="Цель / опыт / сроки (можно коротко)"></textarea>
+
+                  <div style="height:10px"></div>
+
+                  <button class="btn btnPrimary btnFull" type="submit">Отправить заявку</button>
+
+                  <p class="note">Ответим быстро. Без «перезвоним через неделю».</p>
+                </form>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+  const TG_TOKEN = "8564161365:AAHOGjGaiIp4R63V811ApK7yaMpG43VxKv8";
+  const TG_CHAT_ID = 193675975;
+
+  document.querySelectorAll(".course-form").forEach((form) => {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const fd = new FormData(form);
+      const course  = fd.get("course") || document.title;
+      const name    = fd.get("name") || "";
+      const contact = fd.get("contact") || "";
+      const message = fd.get("message") || "";
+
+      const text =
+`🧾 Заявка на курс MET
+Курс: ${course}
+Имя: ${name}
+Контакт: ${contact}
+Запрос: ${message}
+Страница: ${location.href}`;
+
+      try {
+        const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ chat_id: TG_CHAT_ID, text })
+        });
+
+        if (!res.ok) throw new Error("sendMessage failed");
+
+        alert("Заявка отправлена! Мы скоро напишем 🙂");
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        alert("Не удалось отправить заявку. Напиши нам в Telegram вручную 🙏");
+      }
+    });
+  });
+</script>
+</body>
+<script>
+  // фокус в поле "Имя" после клика "Записаться"
+  const signupBtn = document.querySelector('a[href="#apply"]');
+  const nameInput = document.getElementById("apply-name");
+
+  if (signupBtn && nameInput) {
+    signupBtn.addEventListener("click", () => {
+      // ждём, пока браузер проскроллит к якорю
+      setTimeout(() => {
+        nameInput.focus();
+        nameInput.select(); // если вдруг там уже что-то есть
+      }, 50);
+    });
+  }
+</script>
+</html>
