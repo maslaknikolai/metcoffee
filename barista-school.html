@@ -26,94 +26,348 @@
 <body>
   <!-- NAV (same as site) -->
   <div data-collapse="small" data-animation="over-left" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar sticky w-nav">
-    <div class="menu-button w-nav-button">
-      <div class="icon w-icon-nav-menu"></div>
-    </div>
-    <div class="navlogo"><img src="/images/logo-MET.svg" loading="lazy" alt="" class="image-3"></div>
-    <nav role="navigation" class="nav-menu-2 w-nav-menu">
-      <a href="index.html" class="navlink w-nav-link">О проекте</a>
-      <a href="adresa-kofeen-met.html" class="navlink w-nav-link">Адреса и Меню</a>
-      <a href="cupping.html" class="navlink w-nav-link">Каппинг</a>
-      <a href="/barista-school.html" aria-current="page" class="navlink w-nav-link w--current">Школа кофе</a>
-    </nav>
+  <div class="menu-button w-nav-button">
+    <div class="icon w-icon-nav-menu"></div>
   </div>
+
+  <nav role="navigation" class="nav-menu-2 w-nav-menu">
+    <a href="index.html" class="navlink w-nav-link">О проекте</a>
+    <a href="adresa-kofeen-met.html" class="navlink w-nav-link">Адреса и Меню</a>
+    <a href="/barista-school.html" aria-current="page" class="navlink w-nav-link w--current">Школа кофе</a>
+  </nav>
+
+  <a href="#" class="navlogo" id="topLogo">
+    <img src="/images/logo-MET.svg" loading="lazy" alt="MET">
+  </a>
+</div>
 
   <div data-w-id="0cbc79d2-de71-0ee2-261e-5957e8490576" class="page-transition"></div>
 
-  <!-- HERO -->
-  <section class="bs-hero">
-    <div class="gridstandard bs-hero__grid">
-      <div class="bs-hero__copy">
-        <h1 class="bs-h1">Школа кофе</h1>
-        <p class="plarge bs-lead">Поставим руку. Научим думать вкусом. Доведём до уверенной смены.</p>
+<section class="bs-hero">
+  <div class="gridstandard bs-hero__grid">
+    <div class="bs-hero__media">
+      <img src="images/school_1.jpg" alt="Школа кофе MET" class="bs-hero__image">
+    </div>
 
-        <div class="bs-cta">
-          <a class="bs-btn bs-btn--primary" href="{{CONTACT_LINK}}" target="_blank" rel="noopener">Записаться</a>
-          <a class="bs-btn bs-btn--ghost" href="{{CONTACT_LINK}}" target="_blank" rel="noopener">Задать вопрос</a>
+    <div class="bs-hero__copy">
+      <h1 class="bs-h1">Школа кофе MET</h1>
+
+      <p class="bs-hero__subtitle">
+        Профессия бариста с практикой в действующей specialty-кофейне
+      </p>
+
+      <p class="bs-lead">
+        Научим управлять вкусом, а не угадывать результат.
+      </p>
+
+      <p class="bs-hero__desc">
+        Практика на профессиональном оборудовании. Международные стандарты.
+      </p>
+
+      <ul class="bs-list bs-list--hero">
+        <li>с нуля до уверенной работы</li>
+        <li>группы до 6 человек</li>
+        <li>помощь с трудоустройством</li>
+      </ul>
+
+      <div class="bs-finalcta__row">
+        <a class="bs-btn bs-btn--primary" href="#" id="signup-btn-hero2">Записаться</a>
+
+        <div class="bs-finalcta__contacts">
+          <span class="bs-finalcta__label">или напишите нам:</span>
+          <a class="bs-btn bs-btn--ghost" href="{{WHATSAPP_LINK}}" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="bs-btn bs-btn--ghost" href="{{TELEGRAM_LINK}}" target="_blank" rel="noopener">Telegram</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="bs-section bs-section--tight">
-  <div class="gridstandard bs-about">
-    <div class="bs-about__left">
-      <div class="bs-kicker bs-kicker--lead">о школе</div>
-      <h2 class="bs-about__title">Не курс. Профессия.</h2>
-      <p class="bs-about__lead">Ставим руки и голову: чтобы ты управлял вкусом, а не надеялся.</p>
-    </div>
-
-    <div class="bs-about__right">
-      <p class="plarge">Мы учим так, чтобы ты не “делал напиток”, а управлял результатом: вкус, повторяемость, скорость, чистота.</p>
-      <p class="plarge">Фокус — практика. Ошибки разбираем по причине, не по ощущениям. Руки, алгоритмы, стандарты.</p>
-      <p class="plarge">Сильных студентов помогаем довести до реальной работы: В кофейнях МЕТ.</p>
+      <div class="bs-hero__meta">
+        <div class="bs-hero__meta-item">Ближайший поток: <strong>[дата]</strong></div>
+        <div class="bs-hero__meta-item">Осталось: <strong>4 места</strong></div>
+      </div>
     </div>
   </div>
 </section>
 
-  <!-- COURSES -->
-  <section class="bs-section">
-    <div class="gridstandard">
+ <!-- FOR WHO -->
+<section class="bs-section bs-section--tight">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
       <div class="bs-head">
-  <h2 class="bs-sectionTitle">Программа обучения</h2>
+        <h2 class="bs-sectionTitle bs-sectionTitle--audience">Кому подойдёт обучение</h2>
+      </div>
+
+      <div class="bs-audience">
+        <article class="bs-audience__card">
+          <div class="bs-kicker">Бариста и энтузиасты</div>
+          <p class="bs-text bs-text--lead bs-text--strong">Наши курсы для вас, если:</p>
+          <ul class="bs-list bs-list--big">
+            <li>хотите стать бариста с нуля</li>
+            <li>хотите научиться заваривать кофе дома или для себя</li>
+            <li>уже работаете и хотите вырасти</li>
+            <li>планируете открыть кофейню</li>
+            <li>любите кофе и хотите понимать его глубже</li>
+          </ul>
+          <div class="bs-cta bs-cta--small">
+  <a class="bs-btn bs-btn--ghost" href="#" id="audience-more-btn">Подробнее</a>
+</div>
+        </article>
+
+        <article class="bs-audience__card">
+          <div class="bs-kicker">Для бизнеса</div>
+          <h3 class="bs-audience__title">Обучаем команды кофеен, ресторанов и баров</h3>
+          <p class="bs-text">
+            Школа MET проводит корпоративное обучение для проектов HoReCa.
+          </p>
+          <p class="bs-text bs-text--strong">Мы помогаем:</p>
+          <ul class="bs-list bs-list--big">
+            <li>обучить бариста с нуля</li>
+            <li>повысить уровень команды</li>
+            <li>выстроить стандарты качества</li>
+            <li>снизить потери и стабилизировать вкус</li>
+          </ul>
+          <p class="bs-text">
+            Обучение проходит на базе реальной практики и адаптируется под задачи вашего бизнеса.
+          </p>
+
+          <div class="bs-cta bs-cta--small">
+           <a class="bs-btn bs-btn--primary" href="business-school.html#biz-name">Оставить заявку для бизнеса</a>
+            <a class="bs-btn bs-btn--ghost" href="business-school.html">Подробнее</a>
+          </div>
+        </article>
+      </div>
+    </div>
   </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="bs-section bs-section--skills">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
+      <div class="bs-skills">
+        <div class="bs-skills__intro">
+          <div class="bs-head">
+            <h2 class="bs-sectionTitle bs-sectionTitle--skills">Навыки, которые останутся с вами</h2>
+          </div>
+          <p class="bs-text bs-text--lead">После обучения вы сможете:</p>
+        </div>
+
+        <div class="bs-skills__grid">
+          <div class="bs-result">Настраивать эспрессо и управлять вкусом</div>
+          <div class="bs-result">Работать с оборудованием</div>
+          <div class="bs-result">Готовить молочные напитки</div>
+          <div class="bs-result">Понимать экстракцию</div>
+          <div class="bs-result">Стабильно выдавать результат в потоке</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY MET -->
+<section class="bs-section">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
+      <div class="bs-head">
+        <h2 class="bs-sectionTitle bs-sectionTitle--oneLine">Почему учатся у нас</h2>
+      </div>
+
+      <div class="bs-why">
+  <div class="bs-why__left">
+    <p class="plarge">MET — это не учебный класс. Это действующая система.</p>
+    <ul class="bs-list bs-list--big">
+      <li>10 лет в specialty-кофе</li>
+      <li>собственная обжарка</li>
+      <li>сеть кофеен</li>
+      <li>обучение на реальной практике</li>
+      <li>работа с профессиональным оборудованием</li>
+    </ul>
+  </div>
+
+  <div class="bs-why__right">
+    <p class="bs-why__quote">Вы учитесь не «в теории», а на опыте, который ежедневно применяется в кофейнях.</p>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="bs-section">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
+      <div class="bs-head">
+        <h2 class="bs-sectionTitle">Основа методологии</h2>
+      </div>
+
+      <div class="bs-method">
+        <div class="bs-method__top">
+          <div class="bs-method__item">
+            <h3 class="bs-h3 bs-h3--small">Мастерство</h3>
+            <p class="bs-text">навыки и техника</p>
+          </div>
+
+          <div class="bs-method__item">
+            <h3 class="bs-h3 bs-h3--small">Экстракция</h3>
+            <p class="bs-text">понимание вкуса</p>
+          </div>
+
+          <div class="bs-method__item">
+            <h3 class="bs-h3 bs-h3--small">Точность</h3>
+            <p class="bs-text">стабильный результат</p>
+          </div>
+        </div>
+
+        <div class="bs-method__bottom">
+          <p class="bs-text bs-text--lead">Каждое занятие — это:</p>
+          <ul class="bs-list bs-list--big">
+            <li>практика руками</li>
+            <li>настройка рецептов</li>
+            <li>разбор ошибок</li>
+            <li>работа в условиях потока</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section class="bs-section bs-section--last">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
+      <div class="bs-head">
+        <h2 class="bs-sectionTitle">Как проходит обучение</h2>
+      </div>
+
+      <div class="bs-media">
+        <div class="bs-media__item bs-media__item--large">
+         <img src="images/school_2.jpg" alt="Студенты за кофемашиной" class="bs-media__image">
+        </div>
+
+        <div class="bs-media__item">
+          <img src="images/school_3.jpg" alt="Процесс обучения" class="bs-media__image">
+        </div>
+
+        <div class="bs-media__item">
+          <img src="images/school_4.jpg" alt="Настройка эспрессо" class="bs-media__image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- COURSES -->
+ <section class="bs-section bs-section--sca" id="sca-program">
+  <div class="gridstandard">
+    <div class="bs-head">
+      <h2 class="bs-sectionTitle">Программа обучения по SCA стандартам</h2>
     </div>
 
-    <div class="gridstandard bs-cards">
+    <div class="bs-cards bs-cards--two">
       <article class="bs-course">
         <div class="bs-course__top">
-          <h3 class="bs-h3">Кофе базовый курс</h3>
+          <h3 class="bs-h3">Barista Skills начальный</h3>
         </div>
-        <p class="bs-text">Базовый курс нацелен как на начинающих бариста, так и на уже работающих. 
-           Этот курс дает основные знания пути «от зерна до чашки», оборудовании, в том числе кофе-машинах, кофемолках.
-           Конечно, главным в этом курсе будет практическое обучение приготовления эспрессо, капучино. 
-           (в общем для обучения сотрудников в сетках)</p>
+        <p class="bs-text">
+          Предназначен для начинающих бариста, а также любителей, которые хотят разобраться в азах
+          работы с кофемашиной и молоком. Закрыть все вопросы касательно оборудования и процессов, которые
+          протекают при варке кофе. А также научиться правильной работе с оборудованием и уходом за ним, понять азы
+          стандартов заведения.
+        </p>
         <div class="bs-kv">
-          <div class="bs-kv__item">Длительность: <strong>6 часов (один-два дня)</strong></div>
-          <div class="bs-kv__item">Цена: <strong>9000₽</strong></div>
+          <div class="bs-kv__item">Длительность: <strong>2 дня по 8 часов</strong></div>
+          <div class="bs-kv__item">Цена: <strong>18000₽</strong></div>
         </div>
-        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-coffee-basic.html">Подробнее</a>
+        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-barista-skills-basic.html">Подробнее</a>
       </article>
 
       <article class="bs-course">
         <div class="bs-course__top">
-          <h3 class="bs-h3">Barista skills (под ключ)</h3>
+          <h3 class="bs-h3">Sensory Skills</h3>
         </div>
-        <p class="bs-text">Расширенный базовый курс бариста нацелен на обучение с нуля сотрудников и для тех,
-           кто имеет не глубокий уровень в кофейном мире. А также может быть полезен управленцам и владельцам 
-           кофейни, чтобы понимать методологию своих сотрудников и видеть подводные камни. 
-           Этот курс дает полную базу о каждом этапе пути кофе, который влияет на его вкус и качество, 
-           вы полностью будете разбираться в экстрации, видах напитков и правильности их приготовления, 
-           оборудовании, латте-арте. Углубленная теория и длительная подкрепленная практика на выходе дает 
-           полноценного процессионального бариста. (в общем для открытия кофейни).</p>
+        <p class="bs-text">
+          Предназначен для начинающих бариста и любителей кофе. Даёт понимание того, как работают
+          системы нашего восприятия, что на них влияет и как мы чувствуем вкус и аромат.
+        </p>
         <div class="bs-kv">
-          <div class="bs-kv__item">Длительность: <strong>Курс расчитан на 4 дня по 5часов</strong></div>
-          <div class="bs-kv__item">Цена: <strong>30000₽</strong></div>
+          <div class="bs-kv__item">Длительность: <strong>2 дня по 8 часов</strong></div>
+          <div class="bs-kv__item">Цена: <strong>18000₽</strong></div>
         </div>
-        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-barista-skills-pod-klyuch.html">Подробнее</a>
+        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-sensory-skills.html">Подробнее</a>
       </article>
 
+      <article class="bs-course">
+        <div class="bs-course__top">
+          <h3 class="bs-h3">Barista Skills продвинутый</h3>
+        </div>
+        <p class="bs-text">
+          Даёт больше экспертности в кофейном мире. Студенты знакомятся с основами обжарки
+          кофейных зёрен, важностью их правильного хранения. Формулы экстракции позволяют опираться в работе на
+          цифры и точные знания, добиваясь идеальной вкусоароматики напитка. Помимо органолептической оценки вы
+          познакомитесь с основами стандартов и терминологии SCA и управлением работы заведения.
+        </p>
+        <div class="bs-kv">
+          <div class="bs-kv__item">Длительность: <strong>3 дня по 8 часов</strong></div>
+          <div class="bs-kv__item">Цена: <strong>26000₽</strong></div>
+        </div>
+        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-barista-skils-advanced.html">Подробнее</a>
+      </article>
+
+      <article class="bs-course">
+        <div class="bs-course__top">
+          <h3 class="bs-h3">Sensory Skills продвинутый</h3>
+        </div>
+        <p class="bs-text">
+          Даёт больше экспертности в органолептическом анализе кофе, практику по оценке кофе
+          различными тестами для идеального выбора зерна в кофейню. Формирует полное представление о взаимосвязи
+          обжарки и качества получаемой чашки. Расширяет лексикон профессиональных дегустаторов.
+        </p>
+        <div class="bs-kv">
+          <div class="bs-kv__item">Длительность: <strong>3 дня по 8 часов</strong></div>
+          <div class="bs-kv__item">Цена: <strong>18000₽</strong></div>
+        </div>
+        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-sensory-skills-advanced.html">Подробнее</a>
+      </article>
+
+      <article class="bs-course">
+        <div class="bs-course__top">
+          <h3 class="bs-h3">Barista Prof</h3>
+        </div>
+        <p class="bs-text">
+          Позволит вам говорить на экспертном языке и глубже погрузиться в мир SCA. Благодаря этому курсу
+          вы за 4 дня пройдёте путь от бариста-любителя до специалиста, который сможет не только влиться в
+          деятельность кофейни любого уровня, но и внести положительные изменения. Помимо учебной программы базового
+          и среднего уровня, курс позволит полностью овладеть навыками заваривания и сенсорной оценки чёрного кофе.
+        </p>
+        <div class="bs-kv">
+          <div class="bs-kv__item">Длительность: <strong>4 дня по 8 часов</strong></div>
+          <div class="bs-kv__item">Цена: <strong>60000₽</strong></div>
+        </div>
+        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-barista-prof.html">Подробнее</a>
+      </article>
+
+      <article class="bs-course">
+        <div class="bs-course__top">
+          <h3 class="bs-h3">Sensory Skills Professional</h3>
+        </div>
+        <p class="bs-text">
+          Даёт исчерпывающие знания о мире сенсорной предвзятости, а также методику для
+          объективизации своих оценок. Помимо этого вы узнаете о физиологии восприятия вкусов и ароматов,
+          типах сенсорного анализа, проведении каппинга, а также сможете ориентироваться в колесе вкусов SCA
+          и лексике WCR.
+        </p>
+        <div class="bs-kv">
+          <div class="bs-kv__item">Длительность: <strong>4 дня по 8 часов</strong></div>
+          <div class="bs-kv__item">Цена: <strong>60000₽</strong></div>
+        </div>
+        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-sensory-skills-professional.html">Подробнее</a>
+      </article>
+   
+      <div class="bs-program-title">
+       <h2 class="bs-sectionTitle">Мастер-классы</h2>
+      </div>
       <article class="bs-course">
         <div class="bs-course__top">
           <h3 class="bs-h3">Мастер-класс "Кофейный сомелье"</h3>
@@ -143,150 +397,253 @@
         </div>
         <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-home-brewing.html">Подробнее</a>
       </article>
-    </div>
-  </section>
+  </div>
+</section>
 
-
- <section class="bs-section bs-section--sca">
+<!-- TEACHER -->
+<section class="bs-section">
   <div class="gridstandard">
-    <div class="bs-head">
-      <h2 class="bs-sectionTitle">SCA стандарты</h2>
+    <div class="bs-shell--narrow">
+      <div class="bs-head">
+        <h2 class="bs-sectionTitle">Кто вас обучает</h2>
+      </div>
+
+      <div class="bs-teacher">
+        <div class="bs-teacher__media">
+          <img src="images/school_5.jpg" alt="Любовь Коломыцева" class="bs-teacher__image">
+        </div>
+
+        <div class="bs-teacher__content">
+          <p class="bs-text bs-text--lead">
+            Обучение ведёт сертифицированный AST-тренер Любовь Коломыцева.
+          </p>
+
+          <p class="bs-text">Это значит:</p>
+          <ul class="bs-list bs-list--big">
+            <li>международные стандарты</li>
+            <li>официальная сертификация</li>
+            <li>актуальные знания индустрии</li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <div class="bs-cards bs-cards--two">
-
-      <article class="bs-course">
-        <div class="bs-course__top">
-          <h3 class="bs-h3">Barista Skills начальный</h3>
-        </div>
-        <p class="bs-text">Предназначен для начинающих бариста, а также любителей, которые хотят разобраться в азах
-           работы с кофемашиной и молоком. Закрыть все вопросы касательно оборудования и процессов, которые 
-           протекают при варке кофе. А также научится правильной работе с оборудованием и уходом за ним, азы 
-           стандартов заведения.</p>
-
-        <div class="bs-kv">
-          <div class="bs-kv__item">Длительность: <strong>2 дня по 8 часов</strong></div>
-          <div class="bs-kv__item">Цена: <strong>18000₽</strong></div>
-        </div>
-
-        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-barista-skills-basic.html">Подробнее</a>
-      </article>
-
-      <article class="bs-course">
-        <div class="bs-course__top">
-          <h3 class="bs-h3">Sensory Skills</h3>
-        </div>
-        <p class="bs-text">Предназначен для начинающих бариста, любителей кофе. Даст понимание о том как работают 
-          системы нашего восприятия, что на них влияет и как мы чувствуем.</p>
-
-        <div class="bs-kv">
-          <div class="bs-kv__item">Длительность: <strong>2 дня по 8 часов</strong></div>
-          <div class="bs-kv__item">Цена: <strong>18000₽</strong></div>
-        </div>
-
-        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-sensory-skills.html">Подробнее</a>
-      </article>
- <div class="bs-cards bs-cards--two">
-
-      <article class="bs-course">
-        <div class="bs-course__top">
-          <h3 class="bs-h3">Barista Skils продвинутый</h3>
-        </div>
-        <p class="bs-text">Даст вам больше экспертности в кофейном мире. Студенты знакомятся с основами обжарки
-           кофейных зерен, важностью их правильного хранения. Формулы экстракции позволяют опираться в работе на 
-           цифры и точные знания, добиваясь идеальной вкусоароматики напитка. Помимо органолептической оценки вы 
-           познакомитесь с основами стандартов и терминологии SCA и управления работы заведения.</p>
-
-        <div class="bs-kv">
-          <div class="bs-kv__item">Длительность: <strong>3 дня по 8 часов</strong></div>
-          <div class="bs-kv__item">Цена: <strong>26000₽</strong></div>
-        </div>
-
-       <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-barista-skils-advanced.html">Подробнее</a>
-      </article>
-
-      <article class="bs-course">
-        <div class="bs-course__top">
-          <h3 class="bs-h3">Sensory Skills продвинутый</h3>
-        </div>
-        <p class="bs-text">Даст больше экспертности в органалептическом анализе кофе, практику по оценке кофе 
-          различными тестами для идельного выбора зерна в кофейню. Полное представление о взаимосвязи обжарки и 
-          качества получаемой чашки. Лексикон профессиональных дегустаторов.</p>
-
-        <div class="bs-kv">
-          <div class="bs-kv__item">Длительность: <strong>3 дня по 8 часов</strong></div>
-          <div class="bs-kv__item">Цена: <strong>18000₽</strong></div>
-
-          <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-sensory-skills-advanced.html">Подробнее</a>
-
-        </div>
-    </div>
-     <div class="bs-cards bs-cards--two">
-
-      <article class="bs-course">
-        <div class="bs-course__top">
-          <h3 class="bs-h3">Barista Prof</h3>
-        </div>
-        <p class="bs-text">Позволит вам говорить на экспертном языке и погрузиться в мир SCA. Благодаря этому курсу 
-          вы за 4 дня преодолейте путь от бариста-любителя до специалиста, который сможет не только влиться в 
-          деятельность кофейни любого уровня, но и внести положительные изменения. Помимо учебной программы базового 
-          и среднего уровня, продвинутый курс позволит полностью овладеть навыками заваривания и сенсорной оценки 
-          чёрного кофе.</p>
-
-        <div class="bs-kv">
-          <div class="bs-kv__item">Длительность: <strong>4 дня по 8 часов</strong></div>
-          <div class="bs-kv__item">Цена: <strong>60000₽</strong></div>
-        </div>
-
-        <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-barista-prof.html">Подробнее</a>
-      </article>
-
-      <article class="bs-course">
-        <div class="bs-course__top">
-          <h3 class="bs-h3">Sensory skills professional</h3>
-        </div>
-        <p class="bs-text">Даст исчерпывающие знания о мире сенсорной предвзятости, а также методику для 
-          объективизации своих оценок. Помимо этого вы узнаете о физиологии восприятия вкусов и ароматов, узнаете
-           про типы сенсорного анализа, проведения каппинга, а также сможете ориентировать в колесе вкусов SCA и 
-           лексике WCR.</p>
-
-        <div class="bs-kv">
-          <div class="bs-kv__item">Длительность: <strong>4 дня по 8 часов</strong></div>
-          <div class="bs-kv__item">Цена: <strong>60000₽</strong></div>
-         <a class="bs-btn bs-btn--ghost bs-btn--full" href="course-sensory-skills-professional.html">Подробнее</a>
-
-        </div>
   </div>
 </section>
 
+<!-- RESULT -->
+<section class="bs-section">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
+      <div class="bs-head">
+        <h2 class="bs-sectionTitle bs-sectionTitle--oneLine">Что будет после курса</h2>
+      </div>
 
-  <!-- FAQ -->
-  <section class="bs-section">
-    <div class="gridstandard">
-      <h2 class="h2 bs-h2">FAQ</h2>
-    </div>
+      <div class="bs-resultsBlock">
+        <div class="bs-resultsBlock__left">
+          <p class="bs-text bs-text--lead">Вы:</p>
+          <ul class="bs-list bs-list--big">
+            <li>сможете работать бариста</li>
+            <li>будете понимать вкус и процессы</li>
+            <li>получите практические навыки</li>
+            <li>сможете расти в индустрии</li>
+          </ul>
+        </div>
 
-    <div class="gridstandard bs-accordion">
-      <details class="bs-acc">
-        <summary class="bs-acc__summary">Я с нуля — возьмёте?</summary>
-        <div class="bs-acc__body"><p class="bs-text">Да. Важно только желание и регулярность практики.</p></div>
-      </details>
-      <details class="bs-acc">
-        <summary class="bs-acc__summary">Сколько практики?</summary>
-        <div class="bs-acc__body"><p class="bs-text">Почти всё — практика. Теория короткая и только чтобы понимать “почему”. Дальше — руки: эспрессо/молоко/сенсорика, ошибки разберём и закрепим до стабильного результата.</p></div>
-      </details>
-      <details class="bs-acc">
-        <summary class="bs-acc__summary">Можно после курса работать?</summary>
-        <div class="bs-acc__body"><p class="bs-text">Да. Если по итогам обучения проходишь критерии по скорости, чистоте, стабильности и сервису — можем предложить стажировку/смены в кофейнях MET.</p></div>
-      </details>
-      <details class="bs-acc">
-        <summary class="bs-acc__summary">Где проходит обучение?</summary>
-        <div class="bs-acc__body"><p class="bs-text">В Санкт-Петербурге, в школе MET: ул. Рузовская 10–12, лит. 3.</p></div>
-      </details>
+        <div class="bs-resultsBlock__right">
+         <p class="bs-text bs-text--lead bs-text--strong" style="font-size:20px;">
+            Лучших студентов мы рекомендуем в кофейни MET
+          </p>
+        </div>
+      </div>
     </div>
-  </section>
   </div>
 </section>
+
+<!-- REVIEWS -->
+<section class="bs-section">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
+      <div class="bs-head">
+        <h2 class="bs-sectionTitle">Отзывы</h2>
+      </div>
+
+      <div class="bs-reviews">
+        <article class="bs-review">
+          <p class="bs-review__text">«После курса устроился в кофейню»</p>
+        </article>
+
+        <article class="bs-review">
+          <p class="bs-review__text">«Начал понимать кофе, а не просто готовить»</p>
+        </article>
+
+        <article class="bs-review">
+          <p class="bs-review__text">«После обучения стало понятно, как управлять вкусом, а не действовать наугад»</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SMALL GROUPS -->
+<section class="bs-section">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
+      <div class="bs-head">
+        <h2 class="bs-sectionTitle">Небольшие группы</h2>
+      </div>
+
+      <div class="bs-smallgroups">
+        <div class="bs-smallgroups__main">
+          <p class="bs-text bs-text--lead">
+            Мы обучаем в группах до 6–8 человек.
+          </p>
+          <p class="bs-text">Это позволяет:</p>
+          <ul class="bs-list bs-list--big">
+            <li>работать индивидуально</li>
+            <li>контролировать прогресс</li>
+            <li>быстро прокачивать навыки</li>
+          </ul>
+        </div>
+
+        <div class="bs-smallgroups__accent">
+          <div class="bs-smallgroups__meta">В ближайшем потоке осталось: <strong>4 места</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="bs-section">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
+      <div class="bs-head">
+        <h2 class="bs-sectionTitle">Стоимость обучения</h2>
+      </div>
+
+      <div class="bs-price">
+        <div class="bs-price__content">
+          <p class="bs-text bs-text--lead">Прозрачно и без доплат.</p>
+          <p class="bs-text">В стоимость входит:</p>
+          <ul class="bs-list bs-list--big">
+            <li>обучение</li>
+            <li>практика</li>
+            <li>материалы</li>
+            <li>сертификат</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bs-section bs-section--ctaFinal">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
+
+      <div class="bs-cta-layout">
+
+        <!-- ЛЕВАЯ КОЛОНКА -->
+        <div class="bs-finalcta">
+          <div class="bs-head">
+            <h2 class="bs-sectionTitle">Записаться на курс</h2>
+          </div>
+
+          <p class="bs-text bs-text--lead">
+            Оставьте заявку — мы подберём курс и ответим на вопросы.
+          </p>
+
+          <div class="bs-finalcta__row">
+            <a class="bs-btn bs-btn--primary" href="#" id="signup-btn">Записаться</a>
+            <div class="bs-finalcta__contacts">
+              <span class="bs-finalcta__label">или позвоните нам +7 812 644–87–91</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ПРАВАЯ КОЛОНКА -->
+       <div class="bs-form-wrap">
+  <div class="school-form-card" id="apply-school">
+    <div class="school-form-kicker">Заявка на запись</div>
+
+    <form class="course-form school-form" method="post">
+      <input type="hidden" name="course" value="Школа кофе MET">
+
+      <label class="school-label" for="apply-name">Имя</label>
+      <input id="apply-name" class="school-input" name="name" placeholder="Как к тебе обращаться" required>
+
+      <label class="school-label" for="apply-contact">Контакт</label>
+      <input id="apply-contact" class="school-input" name="contact" placeholder="Telegram / телефон" required>
+
+      <label class="school-label" for="apply-message">Что нужно</label>
+      <textarea id="apply-message" class="school-input school-textarea" name="message" placeholder="Цель / опыт / сроки (можно коротко)"></textarea>
+
+      <button class="school-submit" type="submit">Отправить заявку</button>
+    </form>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bs-section">
+  <div class="gridstandard">
+    <div class="bs-shell--narrow">
+      <div class="bs-head">
+        <h2 class="bs-sectionTitle">FAQ</h2>
+      </div>
+
+      <div class="bs-accordion">
+        <details class="bs-acc">
+          <summary class="bs-acc__summary">Нужен ли опыт?</summary>
+          <div class="bs-acc__body">
+            <p class="bs-text">Нет, можно с нуля.</p>
+          </div>
+        </details>
+
+        <details class="bs-acc">
+          <summary class="bs-acc__summary">Сколько человек в группе?</summary>
+          <div class="bs-acc__body">
+            <p class="bs-text">До 6–8 человек.</p>
+          </div>
+        </details>
+
+        <details class="bs-acc">
+          <summary class="bs-acc__summary">Можно ли работать после курса?</summary>
+          <div class="bs-acc__body">
+            <p class="bs-text">Да, вы получаете базу для старта.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final-cta">
+  <div class="final-cta__container">
+
+    <p class="final-cta__label">Школа кофе MET</p>
+
+   <h2 class="final-cta__title">
+  Не просто обучение, а вход в индустрию specialty-кофе
+</h2>
+
+    <p class="final-cta__text">
+      Вы учитесь у команды, которая ежедневно работает с продуктом 
+      и задаёт стандарты в индустрии.
+    </p>
+
+    <div class="final-cta__buttons">
+      <a href="#" class="btn-primary" id="signup-btn-hero">Записаться на курс</a>
+      <a href="#" class="btn-secondary js-ask">Задать вопрос</a>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- FOOTER (same as site, with extra link) -->
 <div class="footer">
@@ -298,8 +655,6 @@
     <div id="w-node-_7ae20e77-81c1-ccb7-cb07-36f4cdea8fa4-cdea8fa0" class="div-block-26">
       <a href="index.html" class="footernav">О проекте</a>
       <a href="adresa-kofeen-met.html" class="footernav">Адреса и Меню</a>
-      <a href="cupping.html" class="footernav">Каппинг</a>
-      <a href="cupping-about.html" class="footernav">О каппинге</a>
       <a href="/barista-school.html" aria-current="page" class="footernav w--current">Школа кофе</a>
     </div>
 
@@ -320,11 +675,11 @@
           <div class="footercontactheading">Санкт-Петербург</div>
           <ol role="list" class="footercontactlist">
             <li class="list-item">
-              <div>ул. 2-я советская, 27</div>
+              <div>ул. 2-я советская, д. 27/2</div>
               <a href="tel:+7962700-62-61" style="color: var(--white);">+7 (962) 700-62-61</a>
             </li>
             <li>
-              <div class="list-item">Большой проспект В.О., д. 16, «Василеостровский рынок»</div>
+              <div class="list-item">Большой проспект В.О., д. 16/14Б, «Василеостровский рынок»</div>
               <a href="tel:+7965754-07-89" style="color: var(--white);">+7 (965) 754-07-89</a>
             </li>
             <li>
@@ -332,12 +687,12 @@
               <a href="tel:+7965755-29-58" style="color: var(--white);">+7 (965) 755-29-58</a>
             </li>
             <li>
-              <div class="list-item">ул. Решетникова, 12, «Московский рынок»</div>
+              <div class="list-item">ул. Решетникова, д. 12, «Московский рынок»</div>
               <a href="tel:+7904612-89-95" style="color: var(--white);">+7 (937) 944-16-17</a>
             </li>
           </ol>
               <div class="footercontactheading" style="margin-top: 18px;">Школа кофе</div>
-              <div style="color: var(--white);">ул. Рузовская 10–12 лит. 3</div>
+              <div style="color: var(--white);">Введенский канал д. 7</div>
         </div>
       </div>
     </div>
@@ -382,274 +737,1771 @@
   </script>
 
   <!-- Page styles (scoped) -->
-  <style>
-    /* ===== Barista School page additions (minimal + in MET mood) ===== */
-    .bs-hero { padding: 170px 0 60px; }
-     @media (max-width: 991px) { .bs-hero { padding-top: 140px; } }
-     @media (max-width: 479px) { .bs-hero { padding-top: 120px; } }
-    .bs-hero__grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: start; }
-    .bs-h1 { margin-top: 0; margin-bottom: 16px; }
-    .bs-lead { max-width: 52ch; }
-    .bs-cta { display:flex; gap: 12px; flex-wrap: wrap; margin: 22px 0 18px; }
-    .bs-meta { display:flex; gap: 18px; flex-wrap: wrap; opacity: .85; }
-    .bs-meta__item { font-size: 14px; line-height: 1.4; }
+<style>
+  :root{
+    --bs-bg: #ffffff;
+    --bs-card: #f0f0f0;
+    --bs-text: #111111;
+    --bs-border: rgba(0,0,0,.18);
+  }
 
-    .bs-card { background: #f0f0f0; padding: 22px; border-radius: 2px; }
-    .bs-card__title { font-size: 14px; letter-spacing: .02em; text-transform: uppercase; opacity: .75; margin-bottom: 14px; }
-    .bs-card__list { display:flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
-    .bs-card__row { display:flex; justify-content: space-between; gap: 12px; font-size: 14px; }
-    .bs-card__row span { opacity: .7; }
-    .bs-section { padding: 70px 0; }
-    .bs-grid { row-gap: 18px; }
-    .bs-h2 { margin: 0 0 14px; }
-    .bs-section--last { padding-bottom: 110px; }
-    .bs-sub { max-width: 70ch; opacity: .9; }
+  /* base */
+  .bs-section{
+    padding: 72px 0;
+  }
 
-    .bs-cards { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin-top: 24px; }
-    .bs-course { background: #f0f0f0; padding: 22px; }
-    .bs-course__top { display:flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
-    .bs-h3 { margin: 0; font-size: 24px; line-height: 1.1; }
-    .bs-tag { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; opacity: .7; }
-    .bs-text { font-size: 16px; line-height: 1.5; margin: 0 0 14px; opacity: .95; }
-    .bs-kv { display:flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
-    .bs-kv__item { font-size: 14px; opacity: .9; }
+  .bs-section--tight{
+    padding-top: 36px;
+  }
 
-    .bs-btn { display:inline-flex; align-items:center; justify-content:center; padding: 12px 14px; text-decoration: none; font-size: 14px; border-radius: 2px; transition: opacity .2s ease; }
-    .bs-btn:hover { opacity: .75; }
-    .bs-btn--primary { background: #111; color: #fff; }
-    .bs-btn--ghost { background: transparent; color: #111; border: 1px solid rgba(0,0,0,.2); }
-    .bs-btn--full { width: 100%; }
+  .bs-section--last{
+    padding-bottom: 110px;
+  }
 
-    .bs-accordion { display:flex; flex-direction: column; gap: 10px; margin-top: 18px; }
-    .bs-acc { background: #f0f0f0; padding: 0; border-radius: 2px; overflow: hidden; }
-    .bs-acc__summary { list-style: none; cursor: pointer; padding: 16px 18px; font-size: 16px; }
-    .bs-acc__summary::-webkit-details-marker { display:none; }
-    .bs-acc__body { padding: 0 18px 18px; }
-    .bs-list { margin: 0; padding-left: 18px; }
-    .bs-list li { margin: 8px 0; opacity: .95; }
-    .bs-list--big li { font-size: 16px; }
+  .bs-shell{
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
 
-    .bs-forwho { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 18px; }
-    .bs-forwho__item { background:#f0f0f0; padding: 18px; display:flex; flex-direction: column; gap: 6px; }
-    .bs-forwho__item strong { font-size: 16px; }
-    .bs-forwho__item span { font-size: 14px; opacity: .85; }
+  .bs-shell--narrow{
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
 
-    .bs-results { margin-top: 16px; }
+  .gridstandard > .bs-shell,
+  .gridstandard > .bs-shell--narrow{
+    grid-column: 1 / -1;
+  }
 
-    .bs-form { background:#f0f0f0; padding: 22px; display:flex; flex-direction: column; gap: 10px; }
-    .bs-label { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; opacity: .75; }
-    .bs-input { width: 100%; padding: 12px 12px; border: 1px solid rgba(0,0,0,.15); background: #fff; font-size: 14px; }
-    .bs-textarea { min-height: 110px; resize: vertical; }
-    .bs-hint { font-size: 12px; opacity: .65; line-height: 1.4; margin-top: 6px; }
-    .bs-inline { color: inherit; text-decoration: underline; }
+  .bs-head{
+    margin-bottom: 24px;
+  }
 
-    .bs-footnote { font-size: 12px; opacity: .7; margin-top: 10px; }
-    .bs-head { margin-bottom: 18px; }
+  .bs-sectionTitle{
+    margin: 0;
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    text-transform: none;
+    max-width: 16ch;
+  }
 
-    .bs-sectionTitle{
-     margin: 0;
-     font-size: 34px;
-     line-height: 1.1;
-     letter-spacing: -0.01em;
-     text-transform: none;
-     font-weight: 400;
-     }
-     @media (max-width: 479px){
-     .bs-sectionTitle{ font-size: 28px; }
-     }
-     .bs-sectionHead{
-     display:grid;
-     grid-template-columns: 260px minmax(0, 1fr);
-     align-items: baseline;
-     gap: 28px;
-      margin-bottom: 18px;
-     }
+  .bs-sectionTitle--audience{
+    font-size: 42px;
+    white-space: nowrap;
+    max-width: none;
+    line-height: 1;
+  }
 
-     .bs-sectionNote{
-     max-width: 72ch;
-     margin: 0;
-     opacity: .9;
-     }
+  .bs-sectionTitle--oneLine{
+    white-space: nowrap !important;
+    display: block;
+    max-width: none;
+    line-height: 1.1;
+  }
 
-     @media (max-width: 991px){
-     .bs-sectionHead{ grid-template-columns: 1fr; gap: 10px; }
-     .bs-sectionNote{ max-width: 70ch; }
-     }
-     .bs-section--tight { padding-top: 90px; }
+  .bs-h1{
+    margin: 0 0 18px;
+    font-size: 76px;
+    line-height: .92;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
 
-    /* ===== About (fixed typography + grid, MET mood) ===== */
-    .bs-about{
-      display:grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 48px;
-      align-items:start;
+  .bs-h2{
+    margin: 0 0 14px;
+  }
+
+  .bs-h3{
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .bs-h3--small{
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .bs-kicker{
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+
+  .bs-kicker--lead{
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: 0;
+    text-transform: none;
+    opacity: .9;
+    margin-bottom: 14px;
+  }
+
+  .bs-text{
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: .95;
+  }
+
+  .bs-text--lead{
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .bs-text--strong{
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .bs-text--strong + .bs-list{
+    margin-top: 0;
+  }
+
+  .bs-audience__title{
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 400 !important;
+    font-family: inherit !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+  }
+
+  .bs-sub{
+    max-width: 70ch;
+    opacity: .9;
+  }
+
+  .bs-list{
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .bs-list li{
+    margin: 8px 0;
+    opacity: .95;
+  }
+
+  .bs-list--big li{
+    font-size: 16px;
+  }
+
+  .bs-list--hero{
+    margin: 0 0 24px;
+    padding-left: 20px;
+  }
+
+  .bs-list--hero li{
+    margin: 6px 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .bs-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: opacity .2s ease;
+    box-sizing: border-box;
+  }
+
+  .bs-btn:hover{
+    opacity: .78;
+  }
+
+  .bs-btn--primary{
+    background: #111;
+    color: #fff;
+  }
+
+  .bs-btn--ghost{
+    background: transparent;
+    color: #111;
+    border: 1px solid var(--bs-border);
+  }
+
+  .bs-btn--full{
+    width: 100%;
+  }
+
+  .bs-cta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 0 20px;
+  }
+
+  .bs-cta--small{
+    margin-top: auto;
+    padding-top: 10px;
+  }
+
+  .bs-cta--small .bs-btn{
+    width: fit-content;
+  }
+
+  /* hero */
+  .bs-hero{
+    padding: 120px 0 56px;
+  }
+
+  .bs-hero__grid{
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+    gap: 56px;
+    align-items: center;
+  }
+
+  .bs-hero__media{
+    min-width: 0;
+    width: 100%;
+  }
+
+  .bs-hero__image{
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    display: block;
+    background: #e9e9e9;
+  }
+
+  .bs-hero__copy{
+    min-width: 0;
+    max-width: 560px;
+    text-align: left;
+  }
+
+  .bs-hero__subtitle{
+    margin: 0 0 18px;
+    font-size: 24px;
+    line-height: 1.2;
+    max-width: 24ch;
+  }
+
+  .bs-lead{
+    margin: 0 0 18px;
+    font-size: 22px;
+    line-height: 1.3;
+    max-width: 24ch;
+    text-align: left;
+  }
+
+  .bs-hero__desc{
+    margin: 0 0 18px;
+    font-size: 22px;
+    line-height: 1.3;
+    max-width: 24ch;
+    text-align: left;
+  }
+
+  .bs-hero__points p{
+    margin: 0 0 12px;
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+  .bs-hero__meta{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .bs-hero__meta-item{
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  /* generic cards */
+  .bs-card{
+    background: var(--bs-card);
+    padding: 22px;
+    border-radius: 2px;
+  }
+
+  .bs-card__title{
+    font-size: 14px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    opacity: .75;
+    margin-bottom: 14px;
+  }
+
+  .bs-card__list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .bs-card__row{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .bs-card__row span{
+    opacity: .7;
+  }
+
+  /* about */
+  .bs-about{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .bs-about__title{
+    margin: 0 0 12px;
+    font-size: 54px;
+    line-height: 1;
+  }
+
+  .bs-about__lead{
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.45;
+    opacity: .9;
+    max-width: 34ch;
+  }
+
+  .bs-about__right .plarge{
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  /* audience */
+  .bs-audience{
+    display: grid;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .bs-audience__card{
+    background: var(--bs-card);
+    padding: 34px 36px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 100%;
+  }
+
+  .bs-audience__card .bs-kicker{
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .bs-audience__title{
+    margin: 0 0 16px;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .bs-audience__card .bs-text{
+    margin: 0 0 16px;
+  }
+
+  .bs-audience__card .bs-text--strong{
+    font-weight: 700;
+    margin: 0 0 18px;
+  }
+
+  .bs-audience__card .bs-list{
+    margin: 0 0 20px;
+    padding-left: 18px;
+  }
+
+  .bs-audience__card .bs-list li{
+    margin: 7px 0;
+    line-height: 1.35;
+  }
+
+  /* skills */
+  .bs-section--skills .bs-shell--narrow{
+    max-width: 1120px;
+  }
+
+  .bs-skills{
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  .bs-skills__intro{
+    max-width: 320px;
+  }
+
+  .bs-sectionTitle.bs-sectionTitle--skills{
+    font-size: 44px;
+    line-height: .98;
+    letter-spacing: -0.03em;
+    max-width: none;
+  }
+
+  .bs-section--skills .bs-text--lead{
+    margin-bottom: 0;
+  }
+
+  .bs-skills__grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .bs-section--skills .bs-result{
+    background: var(--bs-card);
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.35;
+    min-height: 120px;
+    box-sizing: border-box;
+  }
+
+  /* why */
+  .bs-why{
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  .bs-why__left{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .bs-why__right{
+    background: var(--bs-card);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bs-why__quote{
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #333;
+    text-align: center;
+    max-width: 26ch;
+  }
+
+  .bs-why__left .plarge{
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  /* method */
+  .bs-method{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .bs-method__top{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 18px;
+  }
+
+  .bs-method__item,
+  .bs-method__bottom{
+    background: var(--bs-card);
+    padding: 24px;
+    box-sizing: border-box;
+  }
+
+  /* courses */
+  .bs-cards{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 18px;
+  margin-top: 24px;
+
+  align-items: stretch; /* ВАЖНО */
+}
+
+  .bs-cards--two{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  .gridstandard .bs-head,
+  .gridstandard .bs-cards{
+    grid-column: 1 / -1;
+  }
+
+  .bs-course{
+  background: var(--bs-card);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* ВАЖНО */
+  box-sizing: border-box;
+}
+
+  .bs-course__top{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .bs-course .bs-btn,
+  .bs-course .bs-btn--full{
+    margin-top: auto;
+  }
+
+  .bs-tag{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    opacity: .7;
+  }
+
+  .bs-kv{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .bs-kv__item{
+    font-size: 14px;
+    opacity: .9;
+  }
+
+  /* media */
+  .bs-media{
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1fr;
+    gap: 18px;
+  }
+
+  .bs-media__item{
+    background: var(--bs-card);
+    overflow: hidden;
+  }
+
+  .bs-media__item--large{
+    grid-row: span 1;
+  }
+
+  .bs-media__image{
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .bs-video{
+    margin-top: 18px;
+  }
+
+  .bs-video__frame{
+    width: 100%;
+    display: block;
+    background: #000;
+  }
+
+  /* faq */
+  .bs-accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .bs-acc{
+    background: var(--bs-card);
+    padding: 0;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .bs-acc__summary{
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 18px;
+    font-size: 16px;
+  }
+
+  .bs-acc__summary::-webkit-details-marker{
+    display: none;
+  }
+
+  .bs-acc__body{
+    padding: 0 18px 18px;
+  }
+
+  /* optional old/support blocks */
+  .bs-grid{
+    row-gap: 18px;
+  }
+
+  .bs-forwho{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 14px;
+    margin-top: 18px;
+  }
+
+  .bs-forwho__item{
+    background: var(--bs-card);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .bs-forwho__item strong{
+    font-size: 16px;
+  }
+
+  .bs-forwho__item span{
+    font-size: 14px;
+    opacity: .85;
+  }
+
+  .bs-form{
+    background: var(--bs-card);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bs-label{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    opacity: .75;
+  }
+
+  .bs-input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(0,0,0,.15);
+    background: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  .bs-textarea{
+    min-height: 110px;
+    resize: vertical;
+  }
+
+  .bs-hint{
+    font-size: 12px;
+    opacity: .65;
+    line-height: 1.4;
+    margin-top: 6px;
+  }
+
+  .bs-inline{
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .bs-footnote{
+    font-size: 12px;
+    opacity: .7;
+    margin-top: 10px;
+  }
+
+  .bs-sectionHead{
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 28px;
+    margin-bottom: 18px;
+  }
+
+  .bs-sectionNote{
+    max-width: 72ch;
+    margin: 0;
+    opacity: .9;
+  }
+
+  .bs-sectionTitle--nudge{
+    padding-left: 0.55ch;
+  }
+
+  .bs-sectionNote--nudge{
+    padding-left: 0.8ch;
+    transform: translateY(4px);
+  }
+
+  .bs-list--oneLine li{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bs-contact{
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .bs-contact__text{
+    max-width: 36ch;
+    margin-top: 0;
+  }
+
+  .bs-contact__right .bs-form{
+    position: sticky;
+    top: 110px;
+  }
+
+  /* teacher */
+  .bs-teacher{
+    display: grid;
+    grid-template-columns: 360px minmax(0, 1fr);
+    gap: 24px;
+    align-items: center;
+  }
+
+  .bs-teacher__media{
+    background: var(--bs-card);
+    overflow: hidden;
+  }
+
+  .bs-teacher__image{
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .bs-teacher__content{
+    background: var(--bs-card);
+    padding: 32px;
+    box-sizing: border-box;
+  }
+
+  /* result */
+  .bs-resultsBlock{
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 24px;
+  }
+
+  .bs-resultsBlock__left,
+  .bs-resultsBlock__right{
+    background: var(--bs-card);
+    padding: 32px;
+    box-sizing: border-box;
+  }
+
+  .bs-resultsBlock__right{
+    display: flex;
+    align-items: center;
+  }
+
+  /* reviews */
+  .bs-reviews{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .bs-review{
+    background: var(--bs-card);
+    padding: 26px;
+    box-sizing: border-box;
+    min-height: 180px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .bs-review__text{
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  /* small groups */
+  .bs-smallgroups{
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .bs-smallgroups__main,
+  .bs-smallgroups__accent{
+    background: var(--bs-card);
+    padding: 32px;
+    box-sizing: border-box;
+  }
+
+  .bs-smallgroups__accent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .bs-smallgroups__meta{
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  /* price */
+  .bs-price{
+    background: var(--bs-card);
+    padding: 32px;
+    box-sizing: border-box;
+  }
+
+  /* final cta */
+  .bs-section--ctaFinal{
+    padding-top: 72px;
+    padding-bottom: 48px;
+  }
+
+  .bs-finalcta{
+    background: #111;
+    color: #fff;
+    padding: 56px 56px 52px;
+    box-sizing: border-box;
+  }
+
+  .bs-finalcta .bs-head{
+    margin-bottom: 18px;
+  }
+
+  .bs-finalcta .bs-sectionTitle{
+    color: #fff;
+    max-width: 14ch;
+  }
+
+  .bs-finalcta .bs-text{
+    color: rgba(255,255,255,.82);
+  }
+
+  .bs-finalcta .bs-text--lead{
+    font-size: 20px;
+    line-height: 1.45;
+    max-width: 34ch;
+    margin-bottom: 28px;
+  }
+
+  .bs-finalcta__row{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .bs-finalcta__row .bs-btn--primary{
+    background: #fff;
+    color: #111;
+    border: none;
+    flex: 0 0 auto;
+  }
+
+  .bs-finalcta__contacts{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .bs-finalcta__label{
+    font-size: 15px;
+    line-height: 1.4;
+    color: rgba(255,255,255,.72);
+    white-space: nowrap;
+  }
+
+  .bs-finalcta__contacts .bs-btn{
+    white-space: nowrap;
+    min-height: 46px;
+    padding: 12px 16px;
+  }
+
+  .bs-finalcta__contacts .bs-btn--ghost{
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.28);
+    background: transparent;
+  }
+
+  .bs-finalcta__contacts .bs-btn--ghost:hover,
+  .bs-finalcta__row .bs-btn--primary:hover{
+    opacity: .82;
+  }
+
+  /* final note */
+  .bs-finalnote{
+    background: var(--bs-card);
+    padding: 36px 40px;
+    box-sizing: border-box;
+    max-width: 920px;
+  }
+
+  .bs-finalnote__eyebrow{
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #111;
+  }
+
+  .bs-finalnote__title{
+    margin: 0 0 14px;
+    max-width: 17ch;
+    font-size: 34px;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+
+  .bs-finalnote__text{
+    margin: 0;
+    max-width: 40ch;
+    font-size: 18px;
+    line-height: 1.45;
+    opacity: .95;
+  }
+
+  .bs-finalnote__actions{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+  }
+
+  .bs-finalnote__link{
+    font-size: 16px;
+    line-height: 1.3;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,.35);
+  }
+
+  .bs-finalnote__link:hover{
+    opacity: .72;
+  }
+
+  /* final custom cta */
+  .final-cta{
+    padding: 72px 0 48px;
+  }
+
+  .final-cta__container{
+    max-width: 1040px;
+    margin: 0 auto;
+    background: #111;
+    color: #fff;
+    padding: 56px;
+    box-sizing: border-box;
+  }
+
+  .final-cta__label{
+    margin: 0 0 12px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: rgba(255,255,255,.72);
+  }
+
+  .final-cta__title{
+    margin: 0 0 18px;
+    font-size: 56px;
+    line-height: .95;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 16ch;
+    color: #fff;
+  }
+
+  .final-cta__text{
+    margin: 0 0 28px;
+    font-size: 20px;
+    line-height: 1.45;
+    max-width: 42ch;
+    color: rgba(255,255,255,.84);
+  }
+
+  .final-cta__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .btn-primary{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 14px 24px;
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: opacity .2s ease;
+  }
+
+  .btn-secondary{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 14px 24px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 2px;
+    transition: opacity .2s ease;
+  }
+
+  .btn-primary:hover,
+  .btn-secondary:hover{
+    opacity: .82;
+  }
+
+  /* responsive */
+  @media (max-width: 991px){
+    .bs-hero{
+      padding: 100px 0 40px;
     }
 
-    .bs-kicker{
-      font-size: 12px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      opacity: .65;
-      margin-bottom: 12px;
+    .bs-hero__grid{
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .bs-hero__image{
+      height: 420px;
+    }
+
+    .bs-hero__copy{
+      max-width: none;
+    }
+
+    .bs-h1{
+      font-size: 56px;
+    }
+
+    .bs-hero__subtitle{
+      font-size: 22px;
+      max-width: 100%;
+    }
+
+    .bs-lead{
+      font-size: 18px;
+      max-width: 100%;
+    }
+
+    .bs-kicker--lead{
+      font-size: 18px;
+    }
+
+    .bs-about{
+      grid-template-columns: 1fr;
+      gap: 18px;
     }
 
     .bs-about__title{
-      margin: 0 0 12px;
-      font-size: 54px;
+      font-size: 42px;
+    }
+
+    .bs-sectionHead{
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .bs-sectionNote{
+      max-width: 70ch;
+    }
+
+    .bs-sectionTitle{
+      font-size: 40px;
+      max-width: none;
+    }
+
+    .bs-sectionTitle--audience{
+      font-size: 38px;
+      white-space: normal;
+    }
+
+    .bs-skills{
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .bs-skills__intro{
+      max-width: none;
+    }
+
+    .bs-sectionTitle.bs-sectionTitle--skills{
+      font-size: 38px;
+    }
+
+    .bs-skills__grid{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bs-cards,
+    .bs-cards--two,
+    .bs-forwho,
+    .bs-why,
+    .bs-method__top,
+    .bs-media,
+    .bs-contact,
+    .bs-audience,
+    .bs-teacher,
+    .bs-resultsBlock,
+    .bs-smallgroups,
+    .bs-reviews{
+      grid-template-columns: 1fr;
+    }
+
+    .bs-audience__card{
+      padding: 24px;
+    }
+
+    .bs-h3--small{
+      font-size: 28px;
+      max-width: none;
+    }
+
+    .bs-contact{
+      gap: 18px;
+    }
+
+    .bs-contact__right .bs-form{
+      position: relative;
+      top: 0;
+    }
+
+    .bs-finalcta{
+      padding: 40px 32px;
+    }
+
+    .bs-finalcta .bs-sectionTitle{
+      max-width: none;
+    }
+
+    .bs-finalnote{
+      padding: 28px 32px;
+      max-width: none;
+    }
+
+    .bs-finalnote__title{
+      font-size: 30px;
+      max-width: none;
+    }
+
+    .bs-finalnote__text{
+      font-size: 17px;
+      max-width: none;
+    }
+
+    .bs-teacher__image{
+      min-height: 340px;
+    }
+
+    .bs-review{
+      min-height: auto;
+    }
+
+    .final-cta__container{
+      padding: 40px 32px;
+    }
+
+    .final-cta__title{
+      font-size: 42px;
+      max-width: none;
+    }
+
+    .final-cta__text{
+      font-size: 18px;
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 767px){
+    .bs-finalcta__row{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .bs-finalcta__contacts{
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 479px){
+    .bs-sectionTitle{
+      font-size: 32px;
+      line-height: .98;
+    }
+
+    .bs-sectionTitle--audience{
+      font-size: 32px;
+      white-space: normal;
+    }
+
+    .bs-sectionTitle.bs-sectionTitle--skills{
+      font-size: 32px;
+      max-width: none;
+    }
+
+    .bs-h1{
+      font-size: 42px;
+    }
+
+    .bs-hero{
+      padding-top: 92px;
+    }
+
+    .bs-hero__image{
+      height: 280px;
+    }
+
+    .bs-hero__subtitle{
+      font-size: 18px;
+    }
+
+    .bs-hero__meta-item,
+    .bs-list--hero li{
+      font-size: 16px;
+    }
+
+    .bs-about__title{
+      font-size: 36px;
+    }
+
+    .bs-skills__grid{
+      grid-template-columns: 1fr;
+    }
+
+    .bs-section--skills .bs-result{
+      padding: 18px;
+      min-height: auto;
+      font-size: 16px;
+    }
+
+    .bs-audience__card,
+    .bs-method__item,
+    .bs-method__bottom,
+    .bs-course,
+    .bs-finalnote,
+    .bs-teacher__content,
+    .bs-resultsBlock__left,
+    .bs-resultsBlock__right,
+    .bs-review,
+    .bs-smallgroups__main,
+    .bs-smallgroups__accent,
+    .bs-price{
+      padding: 20px;
+    }
+
+    .bs-h3--small{
+      font-size: 24px;
+    }
+
+    .bs-finalcta{
+      padding: 24px 20px;
+    }
+
+    .bs-finalcta .bs-text--lead{
+      font-size: 18px;
+    }
+
+    .bs-finalcta__contacts{
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .bs-finalcta__contacts .bs-btn{
+      width: 100%;
+      justify-content: center;
+    }
+
+    .bs-finalnote__title{
+      font-size: 24px;
+      line-height: 1.05;
+    }
+
+    .bs-finalnote__text{
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .bs-review__text,
+    .bs-smallgroups__meta{
+      font-size: 16px;
+    }
+
+    .final-cta{
+      padding: 48px 0 32px;
+    }
+
+    .final-cta__container{
+      padding: 24px 20px;
+    }
+
+    .final-cta__title{
+      font-size: 30px;
       line-height: 1;
     }
 
-    .bs-about__lead{
-      margin: 0;
-      font-size: 18px;
-      line-height: 1.45;
-      opacity: .9;
-      max-width: 34ch;
+    .final-cta__text{
+      font-size: 16px;
+      line-height: 1.4;
     }
 
-    .bs-about__right .plarge{
-      margin-top: 0;
-      margin-bottom: 16px;
+    .final-cta__buttons{
+      flex-direction: column;
     }
 
-    @media (max-width: 991px){
-      .bs-about{ grid-template-columns: 1fr; gap: 18px; }
-      .bs-about__title{ font-size: 42px; }
+    .btn-primary,
+    .btn-secondary{
+      width: 100%;
     }
-
-    @media (max-width: 479px){
-      .bs-about__title{ font-size: 36px; }
-    }
-    /* Responsive */
-    @media (max-width: 991px) {
-      .bs-hero { padding-top: 90px; }
-      .bs-hero__grid { grid-template-columns: 1fr; gap: 20px; }
-      .bs-cards { grid-template-columns: 1fr; }
-      .bs-forwho { grid-template-columns: 1fr; }
-    }
-     .bs-sectionTitle--nudge { padding-left: 0.55ch; }
-     .bs-sectionNote--nudge{
-     padding-left: 0.8ch;   /* вправо “на символ” */
-     transform: translateY(4px); /* чуть вниз */
-    }
-     .bs-sectionTitle--oneLine{
-     white-space: nowrap;
-     display: block;
-     max-width: none;
-     line-height: 1.1;
-    }
-     .bs-sectionTitle--oneLine{
-     white-space: nowrap !important;
-     display: block;
-     max-width: none;
-     line-height: 1.1;
-    }
-     .bs-list--oneLine li{
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
-    }
-     .bs-contact{
-     display:grid;
-     grid-template-columns: 1fr 420px;
-     gap: 48px;
-     align-items:start;
-    }
-
-     .bs-contact__text{
-     max-width: 36ch;
-     margin-top: 0;
-    }
-
-     .bs-contact__right .bs-form{
-     position: sticky;
-     top: 110px;
-    }
-
-@media (max-width: 991px){
-  .bs-contact{ grid-template-columns: 1fr; gap: 18px; }
-  .bs-contact__right .bs-form{ position: relative; top: 0; }
+  }
+ .navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent !important;
+  z-index: 1000;
 }
-.bs-cards--two{
+
+/* логотип */
+.navlogo{
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 60;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navlogo img{
+  display: block;
+  width: 44px;
+  height: auto;
+}
+
+/* меню — аккуратный столбик */
+.nav-menu-2{
+  position: fixed;
+  top: 36px;       /* выравниваем по логотипу */
+  left: 90px;      /* сдвиг вправо от логотипа */
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 6px;
+
+  width: auto !important;
+  min-width: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  z-index: 50;
+
+  transition: opacity .35s ease, transform .35s ease;
+}
+
+/* ссылки */
+.nav-menu-2 .navlink,
+.nav-menu-2 .w-nav-link{
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 0 0 22px !important;
+  white-space: nowrap;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none;
+  position: relative;
+}
+
+/* черная палка у активного пункта */
+.nav-menu-2 .navlink.w--current::before,
+.nav-menu-2 .w-nav-link.w--current::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 34px;
+  background: #111;
+  display: block;
+}
+
+/* плавное исчезание */
+.nav-menu-2.is-hidden{
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+/* мобильную не трогаем */
+@media (max-width: 991px){
+  .nav-menu-2{
+    position: static;
+    top: auto;
+    left: auto;
+    display: block !important;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-menu-2.is-hidden{
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .navlogo{
+    position: static;
+    margin-left: 16px;
+  }
+
+  .navlogo img{
+    width: 38px;
+  }
+}
+.bs-program-title{
+  grid-column: 1 / -1;
+  margin-top: 28px;
+  margin-bottom: 6px;
+}
+
+.bs-hero .bs-btn--primary{
+  background: #111 !important;
+  color: #fff !important;
+  border: 1px solid #111 !important;
+  min-width: 180px;
+}
+.bs-cta-layout{
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 18px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.bs-finalcta{
+  background: #111;
+  color: #fff;
+  padding: 40px !important;
+  height: fit-content;
+  align-self: start;
+}
+
+.bs-form-wrap{
+  background: transparent;
+  padding: 0;
+  display: block;
+}
+
+.school-form-card{
+  background: #f0f0f0;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.school-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.school-form-kicker{
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.55);
+  margin-bottom: 14px;
+}
+
+.school-label{
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.62);
+}
+
+.school-input{
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(0,0,0,.14);
+  background: #fff;
+  font-size: 16px;
+  color: #111;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 0;
+  font-family: inherit;
+}
+
+.school-input::placeholder{
+  color: rgba(0,0,0,.45);
+}
+
+.school-input:focus{
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
+}
+
+.school-textarea{
+  height: 128px;
+  padding: 14px 16px;
+  resize: vertical;
+}
+
+.school-submit{
+  width: 100%;
+  height: 54px;
+  margin-top: 6px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity .2s ease;
+  font-family: inherit;
+}
+
+.school-submit:hover{
+  opacity: .85;
 }
 
 @media (max-width: 991px){
-  .bs-cards--two{
+  .bs-cta-layout{
     grid-template-columns: 1fr;
   }
 }
-.gridstandard .bs-head,
-.gridstandard .bs-cards{
-  grid-column: 1 / -1;
-}
-/* Кнопка всегда внизу карточки */
-.bs-course{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
 
-.bs-course .bs-btn,
-.bs-course .bs-btn--full{
-  margin-top: auto;   /* прижимаем кнопку вниз */
-}
-/* HERO: делаем один центрированный столбец */
-.bs-hero__grid{
-  grid-template-columns: 1fr !important;
-  justify-items: center;
-  text-align: center;
-}
-
-/* прячем всё лишнее в hero */
-.bs-cta,
-.bs-meta,
-.bs-card,
-.bs-hero__right{
-  display: none !important;
-}
-
-/* заголовок — по центру и крупнее */
-.bs-h1{
-  text-align: center;
-  font-size: 92px;       /* если слишком жирно — поставь 80px */
-  line-height: .92;
-  letter-spacing: -0.03em;
-  margin-bottom: 18px;
-}
-
-/* подпись под заголовком — по центру и чуть крупнее */
-.bs-lead{
-  text-align: center;
-  font-size: 20px;
-  line-height: 1.35;
-  max-width: 52ch;
-  margin: 0 auto;
-}
-
-/* адаптив */
-@media (max-width: 991px){
-  .bs-h1{ font-size: 56px; }
-  .bs-lead{ font-size: 18px; }
-}
 @media (max-width: 479px){
-  .bs-h1{ font-size: 44px; }
+  .school-form-card{
+    padding: 20px;
+  }
+
+  .school-input{
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .school-textarea{
+    height: 120px;
+  }
+
+  .school-submit{
+    height: 50px;
+    font-size: 15px;
+  }
 }
-/* "о школе" как подпись */
-.bs-kicker--lead{
-  font-size: 20px;
-  line-height: 1.35;
-  letter-spacing: 0;
-  text-transform: none;
-  opacity: .9;
-  margin-bottom: 14px;
+.school-input:focus{
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
 }
-@media (max-width: 991px){
-  .bs-kicker--lead{ font-size: 18px; }
-}
-  </style>
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const navMenu = document.querySelector('.nav-menu-2');
+  const logo = document.querySelector('.navlogo');
+
+  window.addEventListener('scroll', function () {
+    if (window.innerWidth > 991) {
+      if (window.scrollY > 80) {
+        navMenu.classList.add('is-hidden');
+      } else {
+        navMenu.classList.remove('is-hidden');
+      }
+    }
+  });
+
+  if (logo) {
+    logo.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  const formBlock = document.getElementById('apply-school');
+  const nameInput = document.getElementById('apply-name');
+  const messageInput = document.getElementById('apply-message');
+
+  const signupButtons = [
+    document.getElementById('signup-btn'),
+    document.getElementById('signup-btn-hero'),
+    document.getElementById('signup-btn-hero2')
+  ];
+
+  signupButtons.forEach(btn => {
+    if (btn && formBlock && nameInput) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const offset = 80;
+        const y = formBlock.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth'
+        });
+
+        setTimeout(function () {
+          nameInput.focus();
+          nameInput.select();
+        }, 500);
+      });
+    }
+  });
+
+  document.querySelectorAll('.js-ask').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (!formBlock || !messageInput) return;
+
+      const offset = 80;
+      const y = formBlock.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+
+      setTimeout(function () {
+        messageInput.focus();
+      }, 500);
+    });
+  });
+
+  const audienceMoreBtn = document.getElementById('audience-more-btn');
+  const scaProgram = document.getElementById('sca-program');
+
+  if (audienceMoreBtn && scaProgram) {
+    audienceMoreBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const offset = 80;
+      const y = scaProgram.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const workerUrl = 'https://worker-telegram.metcoffee.workers.dev';
+
+  document.querySelectorAll('.course-form').forEach((form) => {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalText = submitButton ? submitButton.textContent : '';
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Отправляем...';
+      }
+
+      const fd = new FormData(form);
+
+      const data = {
+        course: fd.get('course') || document.title,
+        name: fd.get('name') || '',
+        contact: fd.get('contact') || '',
+        message: fd.get('message') || '',
+        page: window.location.href
+      };
+
+      try {
+        const response = await fetch(workerUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.ok) {
+          throw new Error(result.error || 'Ошибка отправки');
+        }
+
+        alert('Заявка отправлена! Мы скоро свяжемся с вами 🙂');
+        form.reset();
+      } catch (error) {
+        console.error(error);
+        alert('Не удалось отправить заявку. Попробуйте ещё раз или напишите нам в Telegram вручную.');
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>

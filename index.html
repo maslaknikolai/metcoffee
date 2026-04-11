@@ -22,18 +22,21 @@
 
 </head>
 <body>
-  <div data-collapse="small" data-animation="over-left" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar sticky w-nav">
-    <div class="menu-button w-nav-button">
-      <div class="icon w-icon-nav-menu"></div>
-    </div>
-    <div class="navlogo"><img src="/images/logo-MET.svg" loading="lazy" alt="" class="image-3"></div>
-    <nav role="navigation" class="nav-menu-2 w-nav-menu">
-      <a href="index.html" aria-current="page" class="navlink w-nav-link w--current">О проекте</a>
-      <a href="adresa-kofeen-met.html" class="navlink w-nav-link">Адреса и Меню</a>
-      <a href="cupping.html" class="navlink left w-nav-link">Каппинг</a>
-      <a href="/barista-school.html" class="navlink w-nav-link">Школа кофе</a>
-    </nav>
+ <div data-collapse="small" data-animation="over-left" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar sticky w-nav">
+  <div class="menu-button w-nav-button">
+    <div class="icon w-icon-nav-menu"></div>
   </div>
+
+  <nav role="navigation" class="nav-menu-2 w-nav-menu">
+    <a href="index.html" aria-current="page" class="navlink w-nav-link w--current">О проекте</a>
+    <a href="adresa-kofeen-met.html" class="navlink w-nav-link">Адреса и Меню</a>
+    <a href="/barista-school.html" class="navlink w-nav-link">Школа кофе</a>
+  </nav>
+
+  <a href="#" class="navlogo" id="topLogo">
+    <img src="/images/logo-MET.svg" loading="lazy" alt="MET">
+  </a>
+</div>
   <div data-w-id="0cbc79d2-de71-0ee2-261e-5957e8490576" class="page-transition"></div>
   <div id="manifesto" data-w-id="5d6f476c-44ee-d3ce-e0a2-b18cae3ccf39" class="manifesto">
     <a href="#about" class="scrolldown">↓ Вниз</a>
@@ -194,8 +197,7 @@
       <div id="w-node-_7ae20e77-81c1-ccb7-cb07-36f4cdea8fa4-cdea8fa0" class="div-block-26">
         <a href="index.html" aria-current="page" class="footernav w--current">О проекте</a>
         <a href="adresa-kofeen-met.html" class="footernav">Адреса и Меню</a>
-        <a href="cupping.html" class="footernav">Каппинг</a>
-        <a href="cupping-about.html" class="footernav">О каппинге</a>
+        <a href="/barista-school.html" class="footernav">Школа кофе</a>
       </div>
       <div id="w-node-_7ae20e77-81c1-ccb7-cb07-36f4cdea8faf-cdea8fa0">
         <a href="adresa-kofeen-met.html" class="footerheading link">Адреса и Меню</a>
@@ -213,11 +215,11 @@
             <div class="footercontactheading">Санкт-Петербург</div>
             <ol role="list" class="footercontactlist">
               <li class="list-item">
-                <div>ул. 2-я советская, 27</div>
+                <div>ул. 2-я Советская, д. 27/2</div>
                 <a href="tel:+7962700-62-61" style="color: var(--white);">+7 (962) 700-62-61</a>
               </li>
               <li>
-                <div class="list-item">Большой проспект В.О., д. 16, «Василеостровский рынок»</div>
+                <div class="list-item">Большой проспект В.О., д. 16/14Б, «Василеостровский рынок»</div>
                 <a href="tel:+7965754-07-89" style="color: var(--white);">+7 (965) 754-07-89</a>
               </li>
               <li>
@@ -225,11 +227,11 @@
                 <a href="tel:+7965755-29-58" style="color: var(--white);">+7 (965) 755-29-58</a>
               </li>
               <li>
-                <div class="list-item">ул. Решетникова, 12, «Московский рынок»</div>
+                <div class="list-item">ул. Решетникова, д. 12, «Московский рынок»</div>
                 <a href="tel:+7904612-89-95" style="color: var(--white);">+7 (937) 944-16-17</a>
               </li>
                <div class="footercontactheading" style="margin-top: 18px;">Школа кофе</div>
-               <div style="color: var(--white);">ул. Рузовская 10–12 лит. 3</div>
+               <div style="color: var(--white);">Введенский канал д. 7</div>
             </ol>
           </div>
         </div>
@@ -408,6 +410,118 @@ $('.w-nav-menu').on('click', 'a', function() {
     text-align: left;
     margin-top: 10px;
   }
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent !important;
+  z-index: 1000;
+}
+
+/* логотип */
+.navlogo{
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 60;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navlogo img{
+  display: block;
+  width: 44px;
+  height: auto;
+}
+
+/* меню — аккуратный столбик */
+.nav-menu-2{
+  position: fixed;
+  top: 90px;
+  left: 24px;
+  z-index: 40;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 6px;
+
+  width: auto !important;
+  min-width: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  transition: opacity .35s ease, transform .35s ease;
+}
+
+/* ссылки */
+/* ссылки */
+.nav-menu-2 .navlink,
+.nav-menu-2 .w-nav-link{
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 0 0 22px !important;
+  white-space: nowrap;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none;
+  position: relative;
+}
+
+/* активный пункт — чёрная палка слева */
+.nav-menu-2 .navlink.w--current::before,
+.nav-menu-2 .w-nav-link.w--current::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 34px;
+  background: #111;
+  display: block;
+}
+
+
+
+/* плавное исчезание */
+.nav-menu-2.is-hidden{
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+/* мобильную не трогаем */
+@media (max-width: 991px){
+  .nav-menu-2{
+    position: static;
+    top: auto;
+    left: auto;
+    display: block !important;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-menu-2.is-hidden{
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .navlogo{
+    position: static;
+    margin-left: 16px;
+  }
+
+  .navlogo img{
+    width: 38px;
+  }
+}
   /* -----------END SHOP STYLING---------- */
 </style>
   <script>
@@ -484,22 +598,32 @@ const material = new Blotter.ChannelSplitMaterial();
   })
 })();
 </script>
-  <script>
-  $(document).ready(function(){
-    // var manifestoHeight = $("#manifesto").outerHeight(true); // value in px
-    // $("html,body").scrollTop(manifestoHeight * 1);
-    // console.log(manifestoHeight);
+ <script>
+  
+document.addEventListener('DOMContentLoaded', function () {
+  const navMenu = document.querySelector('.nav-menu-2');
+  const logo = document.querySelector('.navlogo');
 
-    setTimeout(() => {
-      const element = document.getElementById('w-node-_54093b92-f5bd-f295-a4dc-cc916d4310c1-1a89b5d3'); // Replace 'yourElementId' with the actual ID of the element
-
-      // Scroll to an offset of 10px above the element
-      const yOffset = -50; // Negative value to go above the element
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }, 100)
+  window.addEventListener('scroll', function () {
+    if (window.innerWidth > 991) {
+      if (window.scrollY > 80) {
+        navMenu.classList.add('is-hidden');
+      } else {
+        navMenu.classList.remove('is-hidden');
+      }
+    }
   });
+
+  if (logo) {
+    logo.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
 </script>
   <!-- <script>
   $(document).ready(function(){
@@ -521,5 +645,6 @@ $(document).ready(function(){
     $("html,body").scrollTop(500);
 });
 </script> -->
+
 </body>
 </html>

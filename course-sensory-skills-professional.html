@@ -231,7 +231,6 @@
 
                   <button class="btn btnPrimary btnFull" type="submit">Отправить заявку</button>
 
-                  <p class="note">Ответим быстро. Без «перезвоним через неделю».</p>
                 </form>
               </div>
             </div>
@@ -241,46 +240,52 @@
       </div>
     </section>
   </main>
-    <script>
-  const TG_TOKEN = "8564161365:AAHOGjGaiIp4R63V811ApK7yaMpG43VxKv8";
-  const TG_CHAT_ID = 193675975;
-
+     <script>
   document.querySelectorAll(".course-form").forEach((form) => {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const fd = new FormData(form);
-      const course  = fd.get("course") || document.title;
-      const name    = fd.get("name") || "";
-      const contact = fd.get("contact") || "";
-      const message = fd.get("message") || "";
 
-      const text =
-`🧾 Заявка на курс MET
-Курс: ${course}
-Имя: ${name}
-Контакт: ${contact}
-Запрос: ${message}
-Страница: ${location.href}`;
+      const data = {
+        course: fd.get("course") || document.title,
+        name: fd.get("name") || "",
+        contact: fd.get("contact") || "",
+        message: fd.get("message") || "",
+        page: location.href
+      };
 
-      const url = `https://api.telegram.org/bot${TG_TOKEN}/sendMessage`;
-      const body = new URLSearchParams();
-      body.set("chat_id", String(TG_CHAT_ID));
-      body.set("text", text);
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalText = submitButton ? submitButton.textContent : "";
 
       try {
-        await fetch(url, {
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = "Отправляем...";
+        }
+
+        const response = await fetch("https://worker-telegram.metcoffee.workers.dev", {
           method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-          body: body.toString()
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
         });
+
+        if (!response.ok) {
+          throw new Error("Ошибка отправки");
+        }
 
         alert("Заявка отправлена! Мы скоро напишем 🙂");
         form.reset();
       } catch (err) {
         console.error(err);
-        alert("Не удалось отправить заявку. Напиши нам в Telegram вручную 🙏");
+        alert("Не удалось отправить заявку. Попробуй ещё раз или напиши нам вручную 🙏");
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }
       }
     });
   });
