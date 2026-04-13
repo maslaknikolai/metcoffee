@@ -1,7 +1,24 @@
 export default {
   async fetch(request, env) {
+    const corsHeaders = {
+      "Access-Control-Allow-Origin": "https://met.coffee",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Content-Type": "application/json"
+    };
+
+    if (request.method === "OPTIONS") {
+      return new Response(null, {
+        status: 204,
+        headers: corsHeaders
+      });
+    }
+
     if (request.method !== "POST") {
-      return new Response("Method not allowed", { status: 405 });
+      return new Response(JSON.stringify({ ok: false, error: "Method not allowed" }), {
+        status: 405,
+        headers: corsHeaders
+      });
     }
 
     try {
@@ -14,14 +31,14 @@ export default {
       const page = data.page || "";
 
       const text =
-`🧾 Заявка на курс MET
+`🧾 Новая заявка MET
 Курс: ${course}
 Имя: ${name}
 Контакт: ${contact}
 Запрос: ${message}
 Страница: ${page}`;
 
-      const tgRes = await fetch(`https://api.telegram.org/bot${env.TG_TOKEN}/sendMessage`, {
+      const tgResponse = await fetch(`https://api.telegram.org/bot${env.TG_TOKEN}/sendMessage`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -33,21 +50,21 @@ export default {
         })
       });
 
-      const tgJson = await tgRes.json();
+      const tgResult = await tgResponse.json();
 
-      if (!tgJson.ok) {
+      if (!tgResponse.ok) {
         return new Response(JSON.stringify({
           ok: false,
-          error: tgJson
+          error: tgResult.description || "Telegram API error"
         }), {
           status: 500,
-          headers: { "Content-Type": "application/json" }
+          headers: corsHeaders
         });
       }
 
       return new Response(JSON.stringify({ ok: true }), {
         status: 200,
-        headers: { "Content-Type": "application/json" }
+        headers: corsHeaders
       });
 
     } catch (error) {
@@ -56,7 +73,7 @@ export default {
         error: String(error)
       }), {
         status: 500,
-        headers: { "Content-Type": "application/json" }
+        headers: corsHeaders
       });
     }
   }
