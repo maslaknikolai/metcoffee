@@ -446,7 +446,7 @@ $('.w-nav-menu').on('click', 'a', function() {
     text-align: left;
     margin-top: 10px;
   }
-  .navbar{
+ .navbar{
   position: fixed;
   top: 0;
   left: 0;
@@ -472,7 +472,7 @@ $('.w-nav-menu').on('click', 'a', function() {
   height: auto;
 }
 
-/* меню — аккуратный столбик */
+/* десктопное меню */
 .nav-menu-2{
   position: fixed;
   top: 90px;
@@ -507,7 +507,7 @@ $('.w-nav-menu').on('click', 'a', function() {
   position: relative;
 }
 
-/* черная палка у активного пункта */
+/* активный пункт */
 .nav-menu-2 .navlink.w--current::before,
 .nav-menu-2 .w-nav-link.w--current::before{
   content: "";
@@ -521,38 +521,106 @@ $('.w-nav-menu').on('click', 'a', function() {
   display: block;
 }
 
-/* плавное исчезание */
+/* скрытие на десктопе */
 .nav-menu-2.is-hidden{
   opacity: 0;
   transform: translateY(-10px);
   pointer-events: none;
 }
 
-/* мобильную не трогаем */
+/* мобильная версия */
 @media (max-width: 991px){
-  .nav-menu-2{
-    position: static;
-    top: auto;
-    left: auto;
-    display: block !important;
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .nav-menu-2.is-hidden{
-    opacity: 1;
-    transform: none;
-    pointer-events: auto;
+  .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5 !important;
+    z-index: 1000;
   }
 
   .navlogo{
-    position: static;
-    margin-left: 16px;
+    position: fixed;
+    top: 8px;
+    left: 16px;
+    z-index: 1003;
+    margin: 0;
   }
 
   .navlogo img{
     width: 38px;
+    height: auto;
+  }
+
+  .menu-button{
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 1004;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent !important;
+  }
+
+  .nav-menu-2{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    padding: 84px 16px 24px;
+    display: none !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px;
+    background: #f5f5f5 !important;
+    z-index: 1002;
+    overflow-y: auto;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .nav-menu-2.w--open{
+    display: flex !important;
+  }
+
+  .nav-menu-2.is-hidden{
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  .nav-menu-2 .navlink,
+  .nav-menu-2 .w-nav-link{
+    display: block !important;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 24px;
+    line-height: 1.05;
+    white-space: normal;
+    text-decoration: none;
+  }
+
+  .nav-menu-2 .navlink.w--current::before,
+  .nav-menu-2 .w-nav-link.w--current::before{
+    display: none !important;
+  }
+
+  .heading{
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 479px){
+  .nav-menu-2 .navlink,
+  .nav-menu-2 .w-nav-link{
+    font-size: 22px;
   }
 }
   /* -----------END SHOP STYLING---------- */
@@ -580,6 +648,10 @@ $('a').each(function() {
 document.addEventListener('DOMContentLoaded', function () {
   const navMenu = document.querySelector('.nav-menu-2');
   const logo = document.querySelector('.navlogo');
+  const menuButton = document.querySelector('.menu-button');
+  const navLinks = document.querySelectorAll('.nav-menu-2 a');
+
+  if (!navMenu) return;
 
   window.addEventListener('scroll', function () {
     if (window.innerWidth > 991) {
@@ -594,12 +666,34 @@ document.addEventListener('DOMContentLoaded', function () {
   if (logo) {
     logo.addEventListener('click', function (e) {
       e.preventDefault();
+
+      if (window.innerWidth <= 991) {
+        navMenu.classList.remove('w--open');
+      }
+
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     });
   }
+
+  if (menuButton) {
+    menuButton.addEventListener('click', function (e) {
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+        navMenu.classList.toggle('w--open');
+      }
+    });
+  }
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth <= 991) {
+        navMenu.classList.remove('w--open');
+      }
+    });
+  });
 });
 </script>
 </body>
